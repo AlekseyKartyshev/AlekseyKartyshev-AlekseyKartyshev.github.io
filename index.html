@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/Icon.svg" type="image/svg">
+  <link rel="stylesheet" href="CSS/style.css">
+  <title>ITifico</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav class="header-nav">
+        <ul class="header-list">
+          <li class="logo">
+            <a href="index.html">
+              <img src="img/logo.svg" alt="ITifico">
+            </a>
+          </li>
+          <li class="header-list-item">
+            <a href="articles.html" class="header-list-item-link">Блог</a>
+          </li>
+          <li class="header-list-item">
+            <a href="courses.html" class="header-list-item-link">Практикум</a>
+          </li>
+          <!-- <li class="header-list-item"> -->
+          <!-- <a href="" class="header-list-item-link">Пожертвования</a> -->
+          <!-- </li> -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="About-site">
+      <div class="container">
+        <ul class="about-site-list">
+          <li class="about-site-list-item">
+            <h1 class="about-site-description"><span class="logo-text">ITifico</span> — платформа для вашего
+              изучения кода</h1>
+            <p class="about-site-paragraph">Курсы для начинающих и продвинутых программистов, а также
+              интересные статьи.<span class="hidden-text"> Присоединяйтесь и разрешите нам поддержать вас в вашей
+                карьере.</span></p>
+          </li>
+          <li class="about-site-list-item">
+            <img src="img/img.svg" alt="Программист" class="programmer">
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="Articles">
+      <div class="container">
+        <div class="articles-header">
+          <h2 class="section-description">Блог</h2>
+          <button class="btn" onclick="document.location='articles.html'">Больше статей</button>
+        </div>
+        <ul class="articles-list">
+          <li class="articles-list-item">
+            <a href="article-1.html">
+              <ul class="article-card">
+                <li class="article-card-name">
+                  <h5 class="article-name">
+                    <a href="article-1.html" class="article-name">Решение квадратных уравнений при помощи Excel</a>
+                  </h5>
+                  <!-- <div class="tag-line"> -->
+                  <!-- <span class=" tag tag-1"></span> -->
+                  <!-- <span class=" tag tag-2"></span> -->
+                  <!-- <span class=" tag tag-3"></span> -->
+                  <!-- </div> -->
+                  <p class="article-start">Теория уравнений интересовала и интересует математиков всех времён и народов.
+                    Необходимость решать уравнения не только первой, но и вто­рой степени еще в древности была вызвана
+                    потребностью решать задачи, связанные с нахождением площадей земельных участков и с земляными
+                    работами
+                    военного характера, а также с развитием астрономии и самой математики.</p>
+                </li>
+                <hr class="article-line">
+                <li class="article-card-date">
+                  <ul class="article-date-list">
+                    <li class="article-date">
+                      <img src="img/calendar 1.svg" alt="" class="calendar">11.11.2022
+                    </li>
+                    <li class="article-watchers">
+                      <!-- <img src="img/eye 1.svg" alt="" class="eye">48 -->
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="Courses">
+      <div class="container">
+        <div class="courses-header">
+          <h2 class="section-description">Практикум</h2>
+          <button class="btn" onclick="document.location='courses.html'">Больше задач</button>
+        </div>
+        <ul class="courses-list">
+          <li class="courses-list-item">
+            <a href="HTML.html" class="course-link">
+              <div class="course HTML">
+                <img src="img/icons8-html-5.svg" alt="" class="proglanguage-logo">
+                <h3 class="course-header">HTML: задачи для практики</h3>
+                <p class="course-description">Практикуйтесь, решайте задачи и становитесь мастером программирования</p>
+                <!-- <a href="" class="course-link">Подробнее</a> -->
+              </div>
+            </a>
+          </li>
+          <li class="courses-list-item">
+            <a href="CSS.html" class="course-link">
+              <div class="course CSS">
+                <img src="img/icons8-css3.svg" alt="" class="proglanguage-logo">
+                <h3 class="course-header">CSS: задачи для практики</h3>
+                <p class="course-description">Практикуйтесь, решайте задачи и становитесь мастером программирования</p>
+                <!-- <a href="" class="course-link">Подробнее</a> -->
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="Reasons">
+      <div class="container">
+        <h2 class="reasons-qwestion">Почему программирование это круто</h2>
+        <ul class="reasons-list">
+          <li class="reasons-list-item">
+            <img src="img/Frame.svg" alt="" class="reason-photo">
+            <p class="reason">Вы можете реализовывать свои идеи с помощью кода</p>
+          </li>
+          <li class="reasons-list-item">
+            <img src="img/Frame (1).svg" alt="" class="reason-photo">
+            <p class="reason">Вы можете программировать откуда угодно</p>
+          </li>
+          <li class="reasons-list-item">
+            <img src="img/Frame (2).svg" alt="" class="reason-photo">
+            <p class="reason">Программисты везде востребованы</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <ul class="footer-list">
+        <li class="footer-list-item">
+          <a href="" class="footer-link">LINKEDIN</a>
+        </li>
+        <li class="footer-list-item">
+          <a href="" class="footer-link">TELEGRAM</a>
+        </li>
+        <li class="footer-list-item">
+          <a href="" class="footer-link">GMAIL</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>
