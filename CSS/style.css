@@ -561,6 +561,8 @@ img {
         margin-right: auto;
     }
 
+.logotype { background: src="img/logo.svg" }
+
     .header-list-item-link:hover {
         color: #E36F59
     }
