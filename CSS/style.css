@@ -851,6 +851,10 @@ img {
     color: var(--black);
   }
 
+  .reasons__description_margin-top{
+    margin-top: 16px;
+  }
+
   .reasons__list {
     display: flex;
     flex-flow: column wrap;
