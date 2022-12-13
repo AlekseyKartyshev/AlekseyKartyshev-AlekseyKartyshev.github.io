@@ -607,7 +607,7 @@ img {
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    margin-bottom: 13px;
+    margin:0 0 13px 0;
   }
 
   .about-site__description_color_red {
