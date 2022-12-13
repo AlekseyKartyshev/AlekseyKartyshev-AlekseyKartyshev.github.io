@@ -56,10 +56,6 @@
   --red-2: #c7523c;
 }
 
-::-webkit-scrollbar {
-  /* width: 0; */
-}
-
 html {
   background-color: var(--white);
 }

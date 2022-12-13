@@ -46,12 +46,22 @@
   font-style: normal;
 }
 
+:root {
+  --white: #ffffff;
+  --black: #23262d;
+  --gray-1: #606268;
+  --gray-2: #c4cacf;
+  --border: #e2e7eb;
+  --red-1: #e36f59;
+  --red-2: #c7523c;
+}
+
 ::-webkit-scrollbar {
-  width: 0;
+  /* width: 0; */
 }
 
 html {
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 *:active,
@@ -68,13 +78,13 @@ html {
 }
 
 body {
-  font-family: "Ubuntu";
-  color: #23262d;
+  /* font-family: "Ubuntu"; */
+  /* color: #23262d; */
   margin: 0;
 }
 
 a {
-  color: #23262d;
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -88,186 +98,394 @@ img {
   max-width: 100%;
 }
 
-.container {
-  padding: 0px 10px;
-  max-width: 1250px;
-  margin-left: auto;
-  margin-right: auto;
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background: var(--border);
 }
 
-.btn {
-  font-family: "Bitter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 19px;
-  padding: 0;
-  text-align: center;
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  width: 176px;
-  height: 50px;
-  background: #ffffff;
-  border: 2px solid #e36f59;
-  border-radius: 8px;
-  color: #e36f59;
+::-webkit-scrollbar-thumb {
+  background: var(--gray-1);
+  border-radius: 10px;
 }
 
-.btn:hover {
-  background: #e36f59;
-  color: #fff;
+::-webkit-scrollbar-track {
+  border-radius: 10px;
 }
 
-.btn:active {
-  border-color: #c7523c;
-  background: #c7523c;
-  color: #fff;
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 0px 10px;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn {
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 0;
+    text-align: center;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    width: 176px;
+    height: 50px;
+    background: #ffffff;
+    border: 2px solid #e36f59;
+    border-radius: 8px;
+    color: #e36f59;
+  }
+
+  .btn:hover {
+    background: #e36f59;
+    color: #fff;
+  }
+
+  .btn:active {
+    border-color: #c7523c;
+    background: #c7523c;
+    color: #fff;
+  }
+
+  .section-description {
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 72px;
+    margin: 0px auto 0px 0px;
+  }
+
+  /* Header */
+  .header-container__nav {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-container__logo {
+    margin-right: auto;
+  }
+
+  .header-container__link {
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .header-container__link:hover {
+    color: var(--red-1);
+  }
+
+  .header-container__link:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  .training {
+    margin-bottom: 70px;
+  }
+
+  .training__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .training__description {
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: 0.01em;
+    margin: 0px auto 0px 0px;
+  }
+
+  .training__list {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .training__card:not(:nth-child(2n)) {
+    margin-right: 30px;
+  }
+
+  .training__card:not(:nth-last-child(-n+1)) {
+    margin-bottom: 30px;
+  }
+
+  .HTML {
+    background: #ffe3ba;
+  }
+
+  .CSS {
+    background: #bac6ff;
+  }
+
+  .JS {
+    background: #FFF7B9;
+  }
+
+  .training-card {
+    box-shadow: 0px 3px 23px rgba(0, 0, 0, 0.07);
+    width: 600px;
+    border-radius: 8px;
+    padding: 20px 30px 25px 20px;
+  }
+
+  .training-card__logo {
+    margin-bottom: 15px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .training-card__header {
+    margin: 0px 0px 15px 0px;
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .training-card__description {
+    margin: 0px 0px 0px 0px;
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .footer-container {
+    margin-top: 100px;
+    color: var(--white);
+    height: 90px;
+    background: var(--black);
+  }
+
+  .footer-container__list {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .footer-container__link {
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--white);
+  }
+
+  .footer-container__link:hover {
+    color: var(--red-1);
+  }
+
+  .footer-container__item:not(:last-child) {
+    margin-right: 40px;
+  }
 }
 
-.section-description {
-  font-family: "Bitter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 72px;
-  margin: 0px auto 0px 0px;
-}
+@media screen and (max-width: 599px) {
+  .container {
+    min-width: 320px;
+    padding: 0px 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-/* Header */
-.header-nav {
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
+  .desktop-btn {
+    display: none;
+  }
 
-.header-list {
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-}
+  .phone-btn {
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 19px;
+    padding: 0;
+    text-align: center;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    width: 50px;
+    height: 30px;
+    background: var(--white);
+    border: 2px solid var(--red-1);
+    border-radius: 8px;
+    color: var(--red-1);
+  }
 
-.logo {
-  margin-right: auto;
-}
+  .phone-btn:hover {
+    background: var(--red-1);
+    color: var(--white);
+  }
 
-.header-list-item-link:hover {
-  color: #e36f59;
-}
+  .phone-btn:active {
+    border-color: var(--red-2);
+    background: var(--red-2);
+    color: var(--white);
+  }
 
-.header-list-item:not(:last-child) {
-  margin-right: 50px;
-}
+  .section-description {
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    /* margin-top: 0; */
+    /* margin-bottom: 40px; */
+    margin: 0px auto 0px 0px;
+  }
 
-/* Courses */
-.Courses {
-  margin-bottom: 70px;
-}
+  /* Header */
+  .header-container__nav {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
 
-.courses-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
-}
+  .header-container__logo {
+    height: 40px;
+  }
 
-.HTML {
-  background-color: #ffe3ba;
-}
+  .header-container__main-link {
+    margin-right: auto;
+  }
 
-.CSS {
-  background-color: #bac6ff;
-}
+  .header-container__link {
+    color: var(--black);
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
 
-.JS {
-  background-color: #fff8ba;
-}
+  .header-container__link:hover {
+    color: var(--red-1);
+  }
 
-.course {
-  box-shadow: 0px 3px 23px rgba(0, 0, 0, 0.07);
-  width: 600px;
-  /* height: 266px; */
-  border-radius: 8px;
-  padding: 20px 30px 25px 20px;
-}
+  .header-container__link:not(:last-child) {
+    margin-right: 25px;
+  }
 
-.proglanguage-logo {
-  margin-bottom: 15px;
-  width: 50px;
-  height: 50px;
-}
+  .training {
+    margin-bottom: 50px;
+  }
 
-.course-header {
-  margin: 0px 0px 15px 0px;
-  font-family: "Ubuntu";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 24px;
-}
+  .training__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 
-.course-description {
-  margin: 0px 0px 0px 0px;
-  font-family: "Ubuntu";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-}
+  .training__description {
+    color: var(--black);
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    margin: 0px auto 0px 0px;
+  }
 
-.course-link {
-  /* margin: 0px 0px 0px auto; */
-  /* font-family: 'Bitter'; */
-  /* font-style: normal; */
-  /* font-weight: 600; */
-  /* font-size: 16px; */
-  /* line-height: 19px; */
-  /* text-decoration-line: underline; */
-}
+  .HTML {
+    background: #ffe3ba;
+  }
 
-.courses-list {
-  display: flex;
-  flex-flow: row wrap;
-}
+  .CSS {
+    background: #bac6ff;
+  }
+  
+  .JS {
+    background: #FFF7B9;
+  }
 
-.courses-list-item:not(:nth-child(2n)) {
-  margin-right: 30px;
-}
+  .training-card {
+    box-shadow: 0px 3px 23px rgba(0, 0, 0, 0.07);
+    width: 100%;
+    border-radius: 8px;
+    padding: 20px 30px 25px 20px;
+  }
 
-.courses-list-item:not(:nth-last-child(-n + 2)) {
-  margin-bottom: 30px;
-}
+  .training-card__logo {
+    display: none;
+  }
 
-/* Footer */
-footer {
-  margin-top: 100px;
-  color: #fff;
-  height: 90px;
-  background: #2d3034;
-}
+  .training-card__header {
+    color: var(--black);
+    margin: 0px 0px 15px 0px;
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+  }
 
-.footer-list {
-  height: 90px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
+  .training-card__description {
+    color: var(--black);
+    margin: 0px 0px 0px 0px;
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
 
-.footer-link {
-  font-family: "Bitter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 16px;
-  color: #fff;
-}
+  .training__list {
+    display: flex;
+    flex-flow: column wrap;
+  }
 
-.footer-link:hover {
-  color: #e36f59;
-}
+  .training__card:not(:last-child) {
+    margin-bottom: 15px;
+  }
 
-.author {
-  margin-right: auto;
-}
+  .footer-container {
+    margin-top: 60px;
+    color: var(--white);
+    height: 90px;
+    background: #2d3034;
+  }
 
-.footer-list-item:not(:last-child) {
-  margin-right: 40px;
+  .footer-container__list {
+    height: 90px;
+    width: 100%;
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: auto;
+  }
+
+  .footer-container__link {
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--white);
+  }
+
+  .footer-container__link:hover {
+    color: var(--red-1);
+  }
 }
