@@ -516,7 +516,7 @@ img {
     /* align-items: center; */
     /* justify-content: center; */
     width: 125px;
-    height: 35px;
+    height: 30px;
     background: var(--white);
     border: 2px solid var(--red-1);
     border-radius: 8px;
@@ -646,8 +646,8 @@ img {
     font-family: "Bitter";
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 28px;
+    line-height: 28px;
     letter-spacing: 0.01em;
     margin: 0px auto 0px 0px;
   }
@@ -657,7 +657,7 @@ img {
     flex-flow: column wrap;
   }
 
-  .ablog__article:not(:last-child) {
+  .blog__article:not(:last-child) {
     margin-bottom: 15px;
   }
 
@@ -673,11 +673,11 @@ img {
     margin-bottom: 20px;
   }
 
-  .tag-line {
-    margin-bottom: 15px;
-  }
+  /* .tag-line { */
+    /* margin-bottom: 15px; */
+  /* } */
 
-  .tag {
+  /* .tag { */
     /* font-family: 'Ubuntu'; */
     /* font-weight: normal; */
     /* height: 24px; */
@@ -685,24 +685,24 @@ img {
     /* line-height: 14px; */
     /* border-radius: 2px; */
     /* padding: 5px 10px 5px 10px; */
-  }
+  /* } */
 
-  .tag-1 {
+  /* .tag-1 { */
     /* background-color: #A2D8FF; */
-  }
+  /* } */
 
-  .tag-2 {
+  /* .tag-2 { */
     /* background-color: #FFD4BC; */
-  }
+  /* } */
 
-  .tag-3 {
+  /* .tag-3 { */
     /* background-color: #BEC5FF; */
-  }
+  /* } */
 
   .article-card__name {
     margin: 0;
     margin-bottom: 15px;
-    color: #23262d;
+    color: var(--black);
     font-family: "Ubuntu";
     font-style: normal;
     font-weight: 700;
