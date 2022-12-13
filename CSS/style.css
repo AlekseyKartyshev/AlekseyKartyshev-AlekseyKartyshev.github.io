@@ -504,7 +504,11 @@ img {
     margin-right: auto;
   }
 
-  .btn {
+  .desktop-btn {
+    display: none;
+  }
+
+  .phone-btn {
     font-family: "Bitter";
     font-style: normal;
     font-weight: 600;
@@ -515,7 +519,7 @@ img {
     /* display: flex; */
     /* align-items: center; */
     /* justify-content: center; */
-    width: 125px;
+    width: 50px;
     height: 30px;
     background: var(--white);
     border: 2px solid var(--red-1);
@@ -523,12 +527,12 @@ img {
     color: var(--red-1);
   }
 
-  .btn:hover {
+  .phone-btn:hover {
     background: var(--red-1);
     color: var(--white);
   }
 
-  .btn:active {
+  .phone-btn:active {
     border-color: var(--red-2);
     background: var(--red-2);
     color: var(--white);
@@ -597,7 +601,7 @@ img {
   }
 
   .about-site__description {
-    color:var(--black);
+    color: var(--black);
     font-family: "Bitter";
     font-style: normal;
     font-weight: 700;
@@ -642,7 +646,8 @@ img {
     margin-bottom: 20px;
   }
 
-  .blog__description{
+  .blog__description {
+    color: var(--black);
     font-family: "Bitter";
     font-style: normal;
     font-weight: 700;
@@ -674,29 +679,29 @@ img {
   }
 
   /* .tag-line { */
-    /* margin-bottom: 15px; */
+  /* margin-bottom: 15px; */
   /* } */
 
   /* .tag { */
-    /* font-family: 'Ubuntu'; */
-    /* font-weight: normal; */
-    /* height: 24px; */
-    /* font-size: 14px; */
-    /* line-height: 14px; */
-    /* border-radius: 2px; */
-    /* padding: 5px 10px 5px 10px; */
+  /* font-family: 'Ubuntu'; */
+  /* font-weight: normal; */
+  /* height: 24px; */
+  /* font-size: 14px; */
+  /* line-height: 14px; */
+  /* border-radius: 2px; */
+  /* padding: 5px 10px 5px 10px; */
   /* } */
 
   /* .tag-1 { */
-    /* background-color: #A2D8FF; */
+  /* background-color: #A2D8FF; */
   /* } */
 
   /* .tag-2 { */
-    /* background-color: #FFD4BC; */
+  /* background-color: #FFD4BC; */
   /* } */
 
   /* .tag-3 { */
-    /* background-color: #BEC5FF; */
+  /* background-color: #BEC5FF; */
   /* } */
 
   .article-card__name {
@@ -753,14 +758,25 @@ img {
   }
 
   /* Courses */
-  .Courses {
+  .training {
     margin-bottom: 50px;
   }
 
-  .courses-header {
+  .training__header {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+  }
+
+  .training__description {
+    color: var(--black);
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    margin: 0px auto 0px 0px;
   }
 
   .HTML {
@@ -771,27 +787,29 @@ img {
     background: #bac6ff;
   }
 
-  .course {
+  .training-card {
     box-shadow: 0px 3px 23px rgba(0, 0, 0, 0.07);
     width: 100%;
     border-radius: 8px;
     padding: 20px 30px 25px 20px;
   }
 
-  .proglanguage-logo {
+  .training-card__logo {
     display: none;
   }
 
-  .course-header {
+  .training-card__header {
+    color: var(--black);
     margin: 0px 0px 15px 0px;
     font-family: "Ubuntu";
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 20px;
   }
 
-  .course-description {
+  .training-card__description {
+    color: var(--black);
     margin: 0px 0px 0px 0px;
     font-family: "Ubuntu";
     font-style: normal;
@@ -800,31 +818,17 @@ img {
     line-height: 20px;
   }
 
-  .course-link {
-    /* margin: 0px 0px 0px auto; */
-    /* font-family: 'Bitter'; */
-    /* font-style: normal; */
-    /* font-weight: 600; */
-    /* font-size: 16px; */
-    /* line-height: 19px; */
-    /* text-decoration-line: underline; */
-  }
-
-  .courses-list {
+  .training__list {
     display: flex;
     flex-flow: column wrap;
   }
 
-  .courses-list-item:not(:last-child) {
+  .training__card:not(:last-child) {
     margin-bottom: 15px;
   }
 
   /* Reasons */
-  .Reasons {
-    /* margin-bottom: 100px; */
-  }
-
-  .reasons-qwestion {
+  .reasons__header {
     font-family: "Bitter";
     font-style: normal;
     font-weight: 700;
@@ -832,18 +836,22 @@ img {
     line-height: 30px;
     text-align: center;
     letter-spacing: 0.01em;
+    margin: 0 0 20px 0;
+    color: var(--black);
   }
 
-  .reason {
+  .reasons__description {
+    margin: 0;
     font-family: "Ubuntu";
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
     text-align: center;
+    color: var(--black);
   }
 
-  .reasons-list {
+  .reasons__list {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -851,7 +859,7 @@ img {
     /* justify-content: space-evenly; */
   }
 
-  .reasons-list-item {
+  .reasons__reason {
     width: 342px;
     display: flex;
     justify-content: center;
@@ -859,37 +867,38 @@ img {
     align-items: center;
   }
 
+  .reasons__reason:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
   /* Footer */
-  footer {
+  .footer-container {
     margin-top: 60px;
-    color: #fff;
+    color: var(--white);
     height: 90px;
     background: #2d3034;
   }
 
-  .footer-list {
+  .footer-container__list {
     height: 90px;
     width: 100%;
     padding: 0px 15px;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     margin-left: auto;
   }
 
-  .footer-link {
+  .footer-container__link {
     font-family: "Bitter";
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
-    color: #fff;
+    color: var(--white);
   }
 
-  .footer-link:hover {
-    color: #e36f59;
-  }
-
-  .footer-list-item:not(:last-child) {
-    margin-right: auto;
+  .footer-container__link:hover {
+    color: var(--red-1);
   }
 }
