@@ -98,21 +98,22 @@ img {
   max-width: 100%;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background: var(--border);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
 @media screen and (min-width: 1200px) {
-  ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-    background: var(--border);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: var(--gray-1);
-    border-radius: 10px;
-  }
-
-  ::-webkit-scrollbar-track {
-    border-radius: 10px;
-  }
   .container {
     max-width: 1230px;
     margin-left: auto;
@@ -516,21 +517,21 @@ img {
     /* justify-content: center; */
     width: 125px;
     height: 35px;
-    background: #ffffff;
-    border: 2px solid #e36f59;
+    background: var(--white);
+    border: 2px solid var(--red-1);
     border-radius: 8px;
-    color: #e36f59;
+    color: var(--red-1);
   }
 
   .btn:hover {
-    background: #e36f59;
-    color: #fff;
+    background: var(--red-1);
+    color: var(--white);
   }
 
   .btn:active {
-    border-color: #c7523c;
-    background: #c7523c;
-    color: #fff;
+    border-color: var(--red-2);
+    background: var(--red-2);
+    color: var(--white);
   }
 
   .section-description {
@@ -572,7 +573,7 @@ img {
   }
 
   .header-container__link:hover {
-    color: #e36f59;
+    color: var(--red-1);
   }
 
   .header-container__link:not(:last-child) {
@@ -607,7 +608,7 @@ img {
 
   .about-site__description_color_red {
     font-weight: 700;
-    color: #e36f59;
+    color: var(--red-1);
   }
 
   .about-site__text_display_hidden {
@@ -631,34 +632,44 @@ img {
   }
 
   /* Articles */
-  .Articles {
+  .blog {
     margin-bottom: 50px;
   }
 
-  .articles-header {
+  .blog__header {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
   }
 
-  .articles-list {
+  .blog__description{
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    margin: 0px auto 0px 0px;
+  }
+
+  .blog__articles-list {
     display: flex;
     flex-flow: column wrap;
   }
 
-  .articles-list-item:not(:last-child) {
+  .ablog__article:not(:last-child) {
     margin-bottom: 15px;
   }
 
   .article-card {
     width: 100%;
-    background: #ffffff;
+    background: var(--white);
     border-radius: 8px;
     box-shadow: 0px 3px 23px rgba(0, 0, 0, 0.07);
     padding: 15px;
   }
 
-  .article-card-name {
+  .article-card__description {
     margin-bottom: 20px;
   }
 
@@ -688,7 +699,7 @@ img {
     /* background-color: #BEC5FF; */
   }
 
-  .article-name {
+  .article-card__name {
     margin: 0;
     margin-bottom: 15px;
     color: #23262d;
@@ -699,12 +710,12 @@ img {
     line-height: 20px;
   }
 
-  .article-name:hover {
-    color: #e36f59;
+  .article-card__link:hover {
+    color: var(--red-1);
     text-decoration: underline;
   }
 
-  .article-start {
+  .article-card__text {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -717,15 +728,15 @@ img {
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    color: #606268;
+    color: var(--gray-1);
   }
 
-  .article-line {
-    border: 1px solid #e2e7eb;
+  .article-card__line {
+    border: 1px solid var(--border);
     margin-bottom: 10px;
   }
 
-  .article-date-list {
+  .article-card__date {
     padding-right: 5px;
     display: flex;
     align-items: center;
@@ -736,18 +747,9 @@ img {
     line-height: 14px;
   }
 
-  .article-date {
-    margin-right: auto;
-  }
-
-  .calendar {
+  .article-card__calendar {
     margin-right: 10px;
-    transform: translateY(2px);
-  }
-
-  .eye {
-    transform: translateY(2px);
-    margin-right: 8px;
+    transform: translateY(-1px);
   }
 
   /* Courses */
