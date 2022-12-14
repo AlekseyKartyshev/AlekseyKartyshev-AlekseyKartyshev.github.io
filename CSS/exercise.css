@@ -46,12 +46,18 @@
   font-style: normal;
 }
 
-::-webkit-scrollbar {
-  width: 0;
+:root {
+  --white: #ffffff;
+  --black: #23262d;
+  --gray-1: #606268;
+  --gray-2: #c4cacf;
+  --border: #e2e7eb;
+  --red-1: #e36f59;
+  --red-2: #c7523c;
 }
 
 html {
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 *:active,
@@ -68,13 +74,13 @@ html {
 }
 
 body {
-  font-family: 'Ubuntu';
-  color: #23262D;
+  font-family: "Ubuntu";
+  color: #23262d;
   margin: 0;
 }
 
 a {
-  color: #23262D;
+  color: #23262d;
   text-decoration: none;
 }
 
@@ -88,192 +94,90 @@ img {
   max-width: 100%;
 }
 
-.container {
-  padding: 0px 10px;
-  max-width: 1250px;
-  margin-left: auto;
-  margin-right: auto;
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background: var(--border);
 }
 
-.btn {
-  font-family: 'Bitter';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 19px;
-  padding: 0;
-  text-align: center;
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  width: 176px;
-  height: 50px;
-  background: #FFFFFF;
-  border: 2px solid #E36F59;
-  border-radius: 8px;
-  color: #E36F59;
+::-webkit-scrollbar-thumb {
+  background: var(--gray-1);
+  border-radius: 10px;
 }
 
-.btn:hover {
-  background: #E36F59;
-  color: #FFF;
+::-webkit-scrollbar-track {
+  border-radius: 10px;
 }
 
-.btn:active {
-  border-color: #C7523C;
-  background: #C7523C;
-  color: #fff;
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 0px 10px;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .exercises__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .exercises__description {
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 72px;
+    letter-spacing: 0.01em;
+    margin: 0px auto 0px 0px;
+  }
+
+  .exercises__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .exercises__exercise:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+  
+  .exercises__exercise:not(:nth-child(2n)) {
+    margin-right: 30px;
+  }
 }
 
-.section-description {
-  font-family: 'Bitter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 50px;
-  letter-spacing: 0.01em;
-  /* margin-top: 0; */
-  /* margin-bottom: 40px; */
-  margin: 0px auto 0px 0px;
-}
+@media screen and (max-width: 599px) {
+  .container {
+    min-width: 320px;
+    padding: 0px 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+  .exercises__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 
-/* Header */
-.header-nav {
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
+  .exercises__description{
+    color: var(--black);
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    margin: 0px auto 0px 0px;
+  }
+  
+  .exercises__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-.header-list {
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-
-}
-
-.logo {
-  margin-right: auto;
-}
-
-.header-list-item-link:hover {
-  color: #E36F59
-}
-
-.header-list-item:not(:last-child) {
-  margin-right: 50px;
-}
-
-/* Article */
-
-.section-description {
-  margin: 0;
-  font-family: 'Bitter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 60px;
-}
-
-.exercises-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
-}
-
-.exercises-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.exercises-list-item:not(:nth-last-child(-n+2)) {
-  margin-bottom: 30px;
-}
-
-.exercises-list-item:not(:nth-child(2n)) {
-  margin-right: 30px;
-}
-
-.exercise-card {
-  width: 600px;
-  background: #FFFFFF;
-  box-shadow: 0px 3px 23px rgba(0, 0, 0, 0.07);
-  border-radius: 8px;
-  padding: 15px;
-}
-.exercise-header{
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.difficult{
-  align-self:flex-end ;
-}
-
-.exercise-name {
-  margin: 0 auto 0 0;
-  color: #23262D;
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 22px;
-}
-
-.exercise-name:hover {
-  /* color: #E36F59; */
-  /* text-decoration: underline; */
-}
-
-.exercise-start {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  width: 570px;
-  /* height: 100px; */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0;
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  color: #606268;
-}
-
-/* Footer */
-footer {
-  margin-top: 100px;
-  color: #fff;
-  height: 90px;
-  background: #2D3034;
-}
-
-.footer-list {
-  height: 90px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.footer-link {
-  font-family: 'Bitter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 16px;
-  color: #fff;
-}
-
-.footer-link:hover {
-  color: #E36F59;
-}
-
-.author {
-  margin-right: auto;
-}
-
-.footer-list-item:not(:last-child) {
-  margin-right: 40px;
+  .exercises__exercise:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }
