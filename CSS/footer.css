@@ -48,7 +48,8 @@
 
 :root {
   --white: #ffffff;
-  --black: #23262d;
+  --black-1: #23262d;
+  --black-2: #2d3034;
   --gray-1: #606268;
   --gray-2: #c4cacf;
   --border: #e2e7eb;
@@ -61,7 +62,7 @@
     margin-top: 100px;
     color: var(--white);
     height: 90px;
-    background: var(--black);
+    background: var(--black-1);
   }
 
   .footer-container__list {
