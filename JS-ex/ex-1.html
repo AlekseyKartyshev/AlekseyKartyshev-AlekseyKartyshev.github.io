@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../img/Icon.svg" type="image/svg">
+  <link rel="stylesheet" href="ex.css">
+  <link rel="stylesheet" href="../CSS/header.css">
+  <link rel="stylesheet" href="../CSS/footer.css">
+  <title>ITifico</title>
+</head>
+
+<body>
+  <header>
+    <div class="container header-container">
+      <nav class="header-container__nav">
+        <a href="index.html" class="header-container__main-link">
+          <img src="../img/logo.svg" class="header-container__logo" alt="ITifico" />
+        </a>
+        <a href="blog.html" class="header-container__link">Блог</a>
+        <a href="courses.html" class="header-container__link">Практикум</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section>
+      <div class="container paragraph-container">
+        <article class="paragraph-container__content">
+          <h1 class="paragraph-container__logo">Сумма чисел до данного</h1>
+          <p class="paragraph-container__paragraph">Напишите функцию <span class="paragraph-container__paragraph_bold">sumTo(n)</span>, которая вычисляет сумму чисел <span class="paragraph-container__paragraph_bold">1 + 2 + ... + n</span>.</p>
+          <p class="paragraph-container__paragraph">Например:</p>
+          <div class="paragraph-container__code">
+            <code>
+                <span class="paragraph_container__code_line">1 | </span>sumTo(1) = 1<br>
+                <span class="paragraph_container__code_line">2 | </span>sumTo(2) = 2 + 1 = 3<br>
+                <span class="paragraph_container__code_line">3 | </span>sumTo(3) = 3 + 2 + 1 = 6<br>
+                <span class="paragraph_container__code_line">4 | </span>sumTo(4) = 4 + 3 + 2 + 1 = 10<br>
+                <span class="paragraph_container__code_line">5 | </span>...<br>
+                <span class="paragraph_container__code_line">6 | </span>sumTo(100) = 100 + 99 + ... + 2 + 1 = 5050<br>
+              </code>
+          </div>
+          <ol class="paragraph-container__list">
+            <p class="paragraph-container__paragraph">Сделайте три варианта решения:</p>
+            <li class="paragraph-container__item">
+              С использованием цикла.
+            </li>
+            <li class="paragraph-container__item">
+              Через рекурсию.
+            </li>
+            <li class="paragraph-container__item">
+              С использованием формулы арифметической прогрессии.
+            </li>
+          </ol>
+          <p class="paragraph-container__paragraph">Пример работы вашей функции:</p>
+          <div class="paragraph-container__code">
+            <code>
+                <span class="paragraph_container__code_line">1 | </span>function sumTo(n) { /*... ваш код ... */ }<br>
+                <span class="paragraph_container__code_line">2 | </span><br>
+                <span class="paragraph_container__code_line">3 | </span>alert( sumTo(100) ); // 5050<br>
+              </code>
+          </div>
+        </article>
+        <article class="paragraph-container__advertisement">
+          <img src="../img/add.jpeg" alt="" class="add">
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="container">
+        <ul class="footer-container__list">
+          <li class="footer-container__item">
+            <a href="" class="footer-container__link">LINKEDIN</a>
+          </li>
+          <li class="footer-container__item">
+            <a href="" class="footer-container__link">TELEGRAM</a>
+          </li>
+          <li class="footer-container__item">
+            <a href="" class="footer-container__link">GMAIL</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>

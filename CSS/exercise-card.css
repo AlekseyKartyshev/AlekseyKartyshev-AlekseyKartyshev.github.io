@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "Bitter";
+  src: url("../fonts/Bitter-Bold.woff2") format("woff2"),
+    url("../fonts/Bitter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bitter";
+  src: url("../fonts/Bitter-SemiBold.woff2") format("woff2"),
+    url("../fonts/Bitter-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu-Regular.woff2") format("woff2"),
+    url("../fonts/Ubuntu-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu-Bold.woff2") format("woff2"),
+    url("../fonts/Ubuntu-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu-Medium.woff2") format("woff2"),
+    url("../fonts/Ubuntu-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu-Light.woff2") format("woff2"),
+    url("../fonts/Ubuntu-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+:root {
+  --white: #ffffff;
+  --black: #23262d;
+  --gray-1: #606268;
+  --gray-2: #c4cacf;
+  --border: #e2e7eb;
+  --red-1: #e36f59;
+  --red-2: #c7523c;
+}
+
+@media screen and (min-width: 1200px){
+  .exercise-card {
+    width: 600px;
+    background: var(--white);
+    box-shadow: 0px 3px 23px rgba(0, 0, 0, 0.07);
+    border-radius: 8px;
+    padding: 15px;
+  }
+  .exercise-card__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .exercise-card__name {
+    margin: 0;
+    color: var(--black);
+    margin: 0px auto 0px 0px;
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+  }
+  
+  /* .exercise-card-name:hover { */
+    /* color: #E36F59; */
+    /* text-decoration: underline; */
+  /* } */
+  
+  .exercise-card__description {
+    margin: 0;
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--gray-1);
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .exercise-card {
+    box-shadow: 0px 3px 23px rgba(0, 0, 0, 0.07);
+    width: 100%;
+    border-radius: 8px;
+    padding: 20px 30px 25px 20px;
+  }
+
+  .exercise-card__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .exercise-card__name {
+    color: var(--black);
+    margin: 0px auto 0px 0px;
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .exercise-card__description {
+    margin: 0;
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--gray-1);
+  }
+}
