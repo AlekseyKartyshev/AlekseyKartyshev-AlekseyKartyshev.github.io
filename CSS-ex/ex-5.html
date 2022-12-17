@@ -6,68 +6,56 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="../img/Icon.svg" type="image/svg">
-  <link rel="stylesheet" href="ex.css">
+  <link rel="stylesheet" href="../CSS/paragraph.css">
+  <link rel="stylesheet" href="../CSS/header.css">
+  <link rel="stylesheet" href="../CSS/footer.css">
   <title>ITifico</title>
 </head>
 
 <body>
   <header>
-    <div class="container">
-      <nav class="header-nav">
-        <ul class="header-list">
-          <li class="logo">
-            <a href="../index.html">
-              <img src="../img/logo.svg" alt="ITifico">
-            </a>
-          </li>
-          <li class="header-list-item">
-            <a href="../articles.html" class="header-list-item-link">Блог</a>
-          </li>
-          <li class="header-list-item">
-            <a href="../courses.html" class="header-list-item-link">Практикум</a>
-          </li>
-          <!-- <li class="header-list-item"> -->
-          <!-- <a href="" class="header-list-item-link">Пожертвования</a> -->
-          <!-- </li> -->
-        </ul>
+    <div class="container header-container">
+      <nav class="header-container__nav">
+        <a href="../index.html" class="header-container__main-link">
+          <img src="../img/logo.svg" class="header-container__logo" alt="ITifico" />
+        </a>
+        <a href="../blog.html" class="header-container__link">Блог</a>
+        <a href="../courses.html" class="header-container__link">Практикум</a>
       </nav>
     </div>
   </header>
   <main>
-    <section class="paragraph">
-      <div class="container">
-        <ul class="paragraph-list">
-          <li class="text">
-            <h1 class="text-logo">Таблица с зеброй</h1>
-            <p>Создайте и стилизуйте таблицу, чтобы она получилась, как показано на рис. 1.</p>
-            <figure>
-              <img src="../img/zebra-table.png" alt="" class="paragraph-photo">
-              <figcaption>рис. 1</figcaption>
-            </figure>
-          </li>
-          <li class="advertisement">
-            <img src="../img/add.jpeg" alt="" class="add">
-          </li>
-        </ul>
+    <section>
+      <div class="container paragraph-container">
+        <article class="paragraph-container__content">
+          <h1 class="paragraph-container__logo">Таблица с зеброй</h1>
+          <p class="paragraph-container__paragraph">Создайте и стилизуйте таблицу, чтобы она получилась, как показано на рис. 1.</p>
+          <figure class="paragraph-container__photo">
+            <img src="../img/zebra-table.png" alt="" class="paragraph-container__image">
+            <figcaption class="paragraph-container__paragraph">рис. 1</figcaption>
+          </figure>
+        </article>
+        <article class="paragraph-container__advertisement">
+          <img src="../img/add.jpeg" alt="" class="paragraph-container__advertisement-photo">
+        </article>
       </div>
     </section>
   </main>
   <footer>
-    <div class="container">
-      <ul class="footer-list">
-        <li class="author">
-          <p>Made with ❤️ by Aleksey Kartyshev ©2022</p>
-        </li>
-        <li class="footer-list-item">
-          <a href="" class="footer-link">LINKEDIN</a>
-        </li>
-        <li class="footer-list-item">
-          <a href="" class="footer-link">TELEGRAM</a>
-        </li>
-        <li class="footer-list-item">
-          <a href="" class="footer-link">GMAIL</a>
-        </li>
-      </ul>
+    <div class="footer-container">
+      <div class="container">
+        <ul class="footer-container__list">
+          <li class="footer-container__item">
+            <a href="" class="footer-container__link">LINKEDIN</a>
+          </li>
+          <li class="footer-container__item">
+            <a href="" class="footer-container__link">TELEGRAM</a>
+          </li>
+          <li class="footer-container__item">
+            <a href="" class="footer-container__link">GMAIL</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </footer>
 </body>

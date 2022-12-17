@@ -121,6 +121,10 @@ img {
     font-weight: 700;
   }
 
+  .paragraph-container__paragraph_italic {
+    font-style: italic;
+  }
+
   .paragraph-container__content {
     width: 915px;
     margin-right: 30px;
@@ -149,13 +153,6 @@ img {
     display: flex;
   }
 
-  .paragraph-photo {
-    display: flex;
-    align-items: center;
-    /* margin-right: auto; */
-    /* margin-left: auto; */
-  }
-
   .paragraph-container__logo {
     margin-top: 0;
     font-family: "Bitter";
@@ -180,8 +177,8 @@ img {
     flex-direction: column;
     display: flex;
     align-items: center;
-    margin-top: 0;
-    margin-bottom: 25px;
+    margin-top: 0px;
+    margin-bottom: 15px;
     font-family: "Ubuntu";
     font-style: normal;
     font-weight: 400;
@@ -219,6 +216,11 @@ img {
   .paragraph-container__advertisement {
     width: 285px;
   }
+
+  .paragraph-container__advertisement-photo {
+    border-radius: 8px;
+    box-shadow: 0px 3px 23px rgba(0, 0, 0, 0.07);
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -233,6 +235,10 @@ img {
     font-weight: 700;
   }
 
+  .paragraph-container__paragraph_italic {
+    font-style: italic;
+  }
+
   .paragraph-container__content {
     width: 100%;
   }
@@ -240,13 +246,11 @@ img {
   .paragraph-container__code {
     box-shadow: 0px 3px 23px rgba(0, 0, 0, 0.07);
     overflow: auto;
-    margin: 0;
-    margin-bottom: 25px;
     padding: 10px 10px 10px 15px;
     border-radius: 8px;
     background-color: var(--black-2);
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-family: "Ubuntu";
     font-style: normal;
     font-weight: 400;
@@ -263,13 +267,6 @@ img {
   /* .paragraph-container { */
 
   /* } */
-
-  .paragraph-photo {
-    display: flex;
-    align-items: center;
-    /* margin-right: auto; */
-    /* margin-left: auto; */
-  }
 
   .paragraph-container__logo {
     margin-top: 0;
@@ -296,8 +293,8 @@ img {
     flex-direction: column;
     display: flex;
     align-items: center;
-    margin-top: 0;
-    margin-bottom: 25px;
+    margin-top: 10px;
+    margin-bottom: 15px;
     font-family: "Ubuntu";
     font-style: normal;
     font-weight: 400;
@@ -332,8 +329,13 @@ img {
   }
 
   .paragraph-container__advertisement {
+    margin-top: 20px;
     width: 100%;
-    
     /* display: none; */
+  }
+
+  .paragraph-container__advertisement-photo {
+    border-radius: 8px;
+    box-shadow: 0px 3px 23px rgba(0, 0, 0, 0.07);
   }
 }
