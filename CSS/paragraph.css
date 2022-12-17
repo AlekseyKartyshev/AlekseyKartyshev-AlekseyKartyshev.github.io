@@ -340,7 +340,7 @@ img {
   }
 
   .paragraph-container__calendar {
-    /* transform: translateY(-1px); */
+    transform: translateY(-1px);
     margin-right: 5px;
   }
 
