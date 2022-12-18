@@ -264,9 +264,9 @@ img {
     color: var(--gray-1);
   }
 
-  /* .paragraph-container { */
-
-  /* } */
+  .paragraph-container {
+    min-height: 60vh;
+  }
 
   .paragraph-container__logo {
     color:var(--black-1);
