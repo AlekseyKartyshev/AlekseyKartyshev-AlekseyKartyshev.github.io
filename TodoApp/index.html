@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Список дел</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="todo-app.js"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+      // localStorage.setItem("session", JSON.stringify([]));
+      try {
+        let test = JSON.parse(localStorage.getItem("session"));
+        test.push();
+      } catch {
+        // console.log(session);
+        localStorage.setItem("session", JSON.stringify([]));
+        // sessionLocal.push({ name: appForm.input.value, done: false });
+      }
+      createTODOApp(
+        JSON.parse(localStorage.getItem("session")),
+        document.getElementById("todo-app"),
+        "Список задач"
+      );
+    });
+  </script>
+</head>
+
+<body>
+  <div id="todo-app" class="container"></div>
+  <img src="" alt="">
+
+</body>
+
+</html>
