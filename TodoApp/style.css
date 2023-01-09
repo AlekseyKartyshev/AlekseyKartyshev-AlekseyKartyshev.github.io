@@ -17,6 +17,7 @@ ul {
 
 .container {
   margin: 0px auto;
+  padding: 0px 10px;
   max-width: 400px;
   display: flex;
   align-items: center;
@@ -76,10 +77,10 @@ ul {
   background-color: #4a1d96;
 }
 
-.form-btn:active {
+/* .form-btn:active {
   border: 1px solid #4a1d96;
   background-color: #4a1d96;
-}
+} */
 
 .list {
   margin-top: 10px;
@@ -136,10 +137,10 @@ ul {
   background-color: #0e9f6e;
 }
 
-.done-btn:active {
+/* .done-btn:active {
   border: 1px solid #0e9f6e;
   background-color: #0e9f6e;
-}
+} */
 
 .delete-btn {
   border: 1px solid #f98080;
@@ -151,7 +152,7 @@ ul {
   background-color: #f05252;
 }
 
-.delete-btn:active {
+/* .delete-btn:active {
   border: 1px solid #f05252;
   background-color: #f05252;
-}
+} */
