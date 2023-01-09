@@ -16,8 +16,8 @@ function createAppForm() {
   input.classList.add("input");
   input.placeholder = "Задача";
   button.classList.add("form-btn", "btn");
-  img.classList.add("btn-img",);
-  img.src = 'img/plus.svg';
+  img.classList.add("btn-img");
+  img.src = "img/plus.svg";
 
   button.append(img);
   buttonWrapper.append(button);
@@ -65,17 +65,16 @@ function addTodoItemFromMassive(massiveWithItems) {
   for (let i of massiveWithItems) {
     let massiveItem = createTODOItem(i.name);
     if (i.done) {
-      massiveItem.item.classList.add("list-group-item-success");
+      massiveItem.item.classList.add("done");
     }
     massiveItem.doneButton.addEventListener("click", function () {
       massiveItem.item.classList.toggle("done");
       let text = massiveItem.item.textContent;
-      let name = text.slice(0, -13);
       let session = JSON.parse(localStorage.getItem("session"));
       // console.log(localSession);
       for (let i of session) {
         // console.log(i.name);
-        if (i.name === name) {
+        if (i.name === text) {
           if (i.done) {
             i.done = false;
             localStorage.setItem("session", JSON.stringify(session));
@@ -90,11 +89,11 @@ function addTodoItemFromMassive(massiveWithItems) {
     massiveItem.deleteButton.addEventListener("click", function () {
       if (confirm("Вы уверены?")) {
         let text = massiveItem.item.textContent;
-        let name = text.slice(0, -13);
         let session = JSON.parse(localStorage.getItem("session"));
         for (let id in session) {
-          if (session[id].name === name) {
-            session.splice(id);
+          console.log(id)
+          if (session[id].name === text) {
+            session.splice(id, 1);
             console.log(session);
             localStorage.setItem("session", JSON.stringify(session));
           }
@@ -137,14 +136,13 @@ function createTODOApp(massive, app, title = "Список дел") {
     let appItem = createTODOItem(appForm.input.value);
 
     appItem.doneButton.addEventListener("click", function () {
-      appItem.item.classList.toggle("list-group-item-success");
+      appItem.item.classList.toggle("done");
       let text = appItem.item.textContent;
-      let name = text.slice(0, -13);
       let session = JSON.parse(localStorage.getItem("session"));
-      // console.log(localSession);
+      console.log(session);
       for (let i of session) {
-        // console.log(i.name);
-        if (i.name === name) {
+        console.log(i.name);
+        if (i.name === text) {
           if (i.done) {
             i.done = false;
             localStorage.setItem("session", JSON.stringify(session));
@@ -159,11 +157,10 @@ function createTODOApp(massive, app, title = "Список дел") {
       if (confirm("Вы уверены?")) {
         appItem.item.remove();
         let text = appItem.item.textContent;
-        let name = text.slice(0, -13);
         let session = JSON.parse(localStorage.getItem("session"));
         for (let id in session) {
-          if (session[id].name === name) {
-            session.splice(id);
+          if (session[id].name === text) {
+            session.splice(id,1);
             console.log(session);
             localStorage.setItem("session", JSON.stringify(session));
           }
