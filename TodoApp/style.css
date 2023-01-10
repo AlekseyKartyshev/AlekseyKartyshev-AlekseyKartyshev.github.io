@@ -3,7 +3,7 @@
 *,
 *::before,
 *::after {
-  /* outline: solid black 1px; */
+  outline: solid black 1px;
   margin: 0px;
   font-family: "Roboto";
   box-sizing: border-box;
@@ -58,11 +58,12 @@ ul {
 }
 
 .input {
+  width: 290px;
   color: #212529;
   font-size: 15px;
   line-height: 15px;
   margin-right: auto;
-  outline: none;
+  /* outline: none; */
   border: none;
   height: 26px;
 }
