@@ -1,6 +1,7 @@
 @import "https://fonts.fontstorage.com/import/gunnyrewritten.css";
 
 * {
+  margin: 0px;
   box-sizing: border-box;
 }
 
@@ -29,6 +30,11 @@ body {
   justify-content: center;
 }
 
+.title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 35px;
+}
 
 .card {
   width: 50px;
@@ -42,6 +48,7 @@ body {
 }
 
 .true {
+  color: #FEF4C0;
   background-color: #FE8535;
   border: 1px solid #FE8535;
 }
@@ -54,19 +61,64 @@ body {
   margin-bottom: 30px;
 }
 
+.card:last-child {
+  margin-right: 0px;
+}
+
+
 .card-title {
   font-size: 20px;
 }
 
-.win-btn {
-  font-size: 25px;
+.btn {
   text-align: center;
   font-family: 'Gunny Rewritten';
-  margin-top: 30px;
-  color: #B20000;
   background-color: #FE8535;
   border: 1px solid #FE8535;
   border-radius: 5px;
+  color: #FEF4C0;
+}
+
+.win-btn {
+  font-size: 25px;
+  margin-top: 30px;
+  border-radius: 5px;
   width: 200px;
   height: 50px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  margin-top: 15px;
+  /* background-color: #FE8535; */
+  border: 1px solid #FE8535;
+  border-radius: 5px;
+  color: #B20000;
+}
+
+.input {
+  font-size: 20px;
+  width: 190px;
+  font-family: 'Gunny Rewritten';
+  color: #B20000;
+  background-color: transparent;
+  border: none;
+  height: 35px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: #B20000;
+}
+
+.form-btn {
+  font-size: 20px;
+  border-radius: 0px 5px 5px 0px;
+  width: 100px;
+  height: 35px;
 }

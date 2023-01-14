@@ -1,4 +1,4 @@
-let numbers = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
+let numbers = [];
 
 function shuffle(arr) {
   var j, temp;
@@ -11,7 +11,7 @@ function shuffle(arr) {
   return arr;
 }
 
-function createTitle(title) {
+function createTitle(title = "Найди пару") {
   let createTitle = document.createElement("h1");
   createTitle.classList.add("title");
   createTitle.textContent = title;
@@ -47,17 +47,17 @@ function deleteCard(massive) {
 
 function createWinButton() {
   let button = document.createElement("button");
-  button.classList.add("win-btn");
-  button.textContent = 'Сыграть еще раз'
+  button.classList.add("win-btn", "btn");
+  button.textContent = "Сыграть еще раз";
   button.addEventListener("click", () => {
     let app = document.querySelector("#app");
     app.replaceChildren();
-    createApp()
+    createApp(numbers);
   });
-  return button
+  return button;
 }
 
-function createApp(title = "Найди пару") {
+function createApp(massive, title) {
   let container = document.querySelector("#app");
   let app = document.createElement("div");
   app.classList.add("app");
@@ -68,7 +68,8 @@ function createApp(title = "Найди пару") {
   let session = [];
   let id = 1;
   let activeCards = [];
-  let cards = createCards(numbers);
+  let = mass = [...massive, ...massive]
+  let cards = createCards(mass);
   for (const item of cards) {
     let card = item.card;
     session.push({
@@ -79,24 +80,17 @@ function createApp(title = "Найди пару") {
     id++;
 
     card.addEventListener("click", function action() {
-      // i.numberArea.textContent = i.number;
-
-      // let clickCheck = JSON.parse(localStorage.getItem("session"));
       // * Активируем карту
       for (const index of session) {
-        // console.log(i.id);
         if (item.id === index.id) {
           index.verificationCheck = true;
           item.numberArea.textContent = item.number;
-          // console.log(iterator.id);
         }
       }
 
       // * Проверяем активированность карты
       for (const ind of session) {
         if (ind.verificationCheck) {
-          // card.classList.add("true");
-          // console.log(numberOfActiveCards)
           activeCards.push(item);
           if (activeCards.length == 2) {
             if (activeCards[0].number === activeCards[1].number) {
@@ -104,19 +98,16 @@ function createApp(title = "Найди пару") {
                 activeCards.pop();
               } else {
                 activeCardNumber += 2;
-                console.log(activeCardNumber)
+                console.log(activeCardNumber);
                 activeCards[0].card.classList.add("true");
                 activeCards[1].card.classList.add("true");
                 activeCards[0].card.removeEventListener("click", action);
                 activeCards[1].card.removeEventListener("click", action);
                 activeCards.pop();
                 activeCards.pop();
-                // console.log(session);
               }
-              // console.log(activeCards);
             } else {
               setTimeout(function () {
-                // console.log(activeCards);
                 activeCards[0].numberArea.textContent = null;
                 activeCards[1].numberArea.textContent = null;
                 activeCards.pop();
@@ -127,29 +118,11 @@ function createApp(title = "Найди пару") {
               index.verificationCheck = false;
             }
             if (session.length === activeCardNumber) {
-              container.append(createWinButton())
+              container.append(createWinButton());
             }
-            // activeCards.pop();
-            // activeCards.pop();
-
-            // console.log(activeCards);
-            // ind.verificationCheck = false;
-            // ind.active = false
-          } 
-          // activeCards.push(ind);
+          }
         }
       }
-
-      // console.log(session);
-      // for (const ind of clickCheck) {
-      //   if (ind.active) {
-      //     numberOfActiveCards++;
-      //     if (numberOfActiveCards <= 2) {
-      //       activeCards.push(ind);
-      //     }
-      // activeCards.push(ind);
-      //   }
-      // }
     });
     app.append(card);
   }
@@ -158,6 +131,40 @@ function createApp(title = "Найди пару") {
   document.body.append(container);
 }
 
+function createForm() {
+  let container = document.querySelector("#app");
+  let title = createTitle()
+  let form = document.createElement("form");
+  form.classList.add("form");
+  let input = document.createElement("input");
+  input.placeholder = "Символы в карточках";
+  input.value = "1 2 3 4 5 6 7 8";
+  input.classList.add("input");
+  input.type = "text";
+  input.id = "input";
+  let button = document.createElement("button");
+  button.textContent = "Начать игру";
+  button.type = "submit";
+  button.classList.add("btn", "form-btn");
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if (!form.input.value) {
+      return;
+    }
+
+    numbers = input.value.split(' ')
+    console.log(numbers)
+    let app = document.querySelector("#app");
+    app.replaceChildren();
+    createApp(numbers)
+  })
+  form.append(input);
+  form.append(button);
+  container.append(title)
+  container.append(form);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-  createApp();
+  createForm();
 });
