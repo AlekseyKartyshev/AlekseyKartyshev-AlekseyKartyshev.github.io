@@ -64,7 +64,7 @@ function createApp(title = "Найди пару") {
   let appTitle = createTitle(title);
   container.append(appTitle);
 
-  let activeCardNumber = 14;
+  let activeCardNumber = 0;
   let session = [];
   let id = 1;
   let activeCards = [];
