@@ -1,0 +1,72 @@
+@import "https://fonts.fontstorage.com/import/gunnyrewritten.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gunny Rewritten';
+  background-color: #FEF4C0;
+  color: #B20000;
+}
+
+.container {
+  color: #B20000;
+  max-width: 290px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.app {
+  width: 290px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+
+.card {
+  width: 50px;
+  height: 50px;
+  background-color: #FDB10B;
+  border: 1px solid #FDB10B;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.true {
+  background-color: #FE8535;
+  border: 1px solid #FE8535;
+}
+
+.card:not(:nth-child(4n)) {
+  margin-right: 30px;
+}
+
+.card:not(:nth-last-child(-n+4)) {
+  margin-bottom: 30px;
+}
+
+.card-title {
+  font-size: 20px;
+}
+
+.win-btn {
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Gunny Rewritten';
+  margin-top: 30px;
+  color: #B20000;
+  background-color: #FE8535;
+  border: 1px solid #FE8535;
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+}
