@@ -92,6 +92,7 @@ function createApp(massive, title) {
       for (const ind of session) {
         if (ind.verificationCheck) {
           activeCards.push(item);
+          item.card.classList.add('active')
           if (activeCards.length == 2) {
             if (activeCards[0].number === activeCards[1].number) {
               if (activeCards[0].id === activeCards[1].id) {
@@ -99,15 +100,19 @@ function createApp(massive, title) {
               } else {
                 activeCardNumber += 2;
                 console.log(activeCardNumber);
-                activeCards[0].card.classList.add("true");
-                activeCards[1].card.classList.add("true");
                 activeCards[0].card.removeEventListener("click", action);
                 activeCards[1].card.removeEventListener("click", action);
+                activeCards[0].card.classList.remove("active");
+                activeCards[1].card.classList.remove("active");
+                activeCards[0].card.classList.add("true");
+                activeCards[1].card.classList.add("true");
                 activeCards.pop();
                 activeCards.pop();
               }
             } else {
               setTimeout(function () {
+                activeCards[0].card.classList.remove("active");
+                activeCards[1].card.classList.remove("active");
                 activeCards[0].numberArea.textContent = null;
                 activeCards[1].numberArea.textContent = null;
                 activeCards.pop();
@@ -118,6 +123,7 @@ function createApp(massive, title) {
               index.verificationCheck = false;
             }
             if (session.length === activeCardNumber) {
+              activeCardNumber = 0
               container.append(createWinButton());
             }
           }

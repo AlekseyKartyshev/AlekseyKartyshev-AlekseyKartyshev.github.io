@@ -1,4 +1,4 @@
-@import "https://fonts.fontstorage.com/import/gunnyrewritten.css";
+@import "https://fonts.fontstorage.com/import/engine.css";
 
 * {
   margin: 0px;
@@ -6,13 +6,13 @@
 }
 
 body {
-  font-family: 'Gunny Rewritten';
-  background-color: #FEF4C0;
-  color: #B20000;
+  font-family: 'Engine';
+  background-color: #DCCAE9;
+  color: #0B0205;
 }
 
 .container {
-  color: #B20000;
+  color: #0B0205;
   max-width: 290px;
   margin-left: auto;
   margin-right: auto;
@@ -37,20 +37,39 @@ body {
 }
 
 .card {
+  color: #0B0205;
   width: 50px;
   height: 50px;
-  background-color: #FDB10B;
-  border: 1px solid #FDB10B;
+  background-color: #724C9D;
+  border: 1px solid #724C9D;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.card:hover{
+  color: #D4DBE2;
+  background-color: #2C1B47;
+  border: 1px solid #2C1B47;
+}
+
+.card:active{
+  color: #D4DBE2;
+  background-color: #2C1B47;
+  border: 1px solid #2C1B47;
+}
+
+.active{
+  color: #D4DBE2;
+  background-color: #2C1B47;
+  border: 1px solid #2C1B47;
+}
+
 .true {
-  color: #FEF4C0;
-  background-color: #FE8535;
-  border: 1px solid #FE8535;
+  color: #D4DBE2;
+  background-color: #9356A0;
+  border: 1px solid #9356A0;
 }
 
 .card:not(:nth-child(4n)) {
@@ -71,12 +90,24 @@ body {
 }
 
 .btn {
-  text-align: center;
-  font-family: 'Gunny Rewritten';
-  background-color: #FE8535;
-  border: 1px solid #FE8535;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Engine';
+  background-color: #724C9D;
+  border: 1px solid #724C9D;
   border-radius: 5px;
-  color: #FEF4C0;
+  color: #D4DBE2;
+}
+
+.btn:hover{
+  background-color: #2C1B47;
+  border: 1px solid #2C1B47;
+}
+
+.btn:active{
+  background-color: #0B0205;
+  border: 1px solid #0B0205;
 }
 
 .win-btn {
@@ -90,22 +121,22 @@ body {
 .form {
   display: flex;
   align-items: center;
-  height: 35px;
+  height: 36px;
   margin-top: 15px;
-  /* background-color: #FE8535; */
-  border: 1px solid #FE8535;
+  border: 1px solid #7B7C81;
   border-radius: 5px;
-  color: #B20000;
+  color: #0B0205;
 }
 
 .input {
+  padding: 0px 5px;
   font-size: 20px;
   width: 190px;
-  font-family: 'Gunny Rewritten';
-  color: #B20000;
+  font-family: 'Engine';
+  color: #0B0205;
   background-color: transparent;
   border: none;
-  height: 35px;
+  height: 36px;
 }
 
 .input:focus {
@@ -113,12 +144,12 @@ body {
 }
 
 .input::placeholder {
-  color: #B20000;
+  color: #0B0205;
 }
 
 .form-btn {
   font-size: 20px;
   border-radius: 0px 5px 5px 0px;
   width: 100px;
-  height: 35px;
+  height: 36px;
 }
