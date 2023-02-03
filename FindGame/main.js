@@ -57,18 +57,60 @@ function createWinButton() {
   return button;
 }
 
+function createForm() {
+  let container = document.querySelector("#app");
+  let title = createTitle();
+  let form = document.createElement("form");
+  form.classList.add("form");
+  let input = document.createElement("input");
+  input.placeholder = "Символы в карточках";
+  input.value = "1 2 3 4 5 6 7 8";
+  input.classList.add("input");
+  input.type = "text";
+  input.id = "input";
+  let button = document.createElement("button");
+  button.textContent = "Начать игру";
+  button.type = "submit";
+  button.classList.add("btn", "form-btn");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    if (!form.input.value) {
+      return;
+    }
+
+    numbers = input.value.split(" ");
+    console.log(numbers);
+    let app = document.querySelector("#app");
+    app.replaceChildren();
+    createApp(numbers);
+  });
+  form.append(input);
+  form.append(button);
+  container.append(title);
+  container.append(form);
+}
+
 function createApp(massive, title) {
   let container = document.querySelector("#app");
   let app = document.createElement("div");
   app.classList.add("app");
   let appTitle = createTitle(title);
   container.append(appTitle);
+  let timer = document.createElement("div");
+  timer.classList.add("timer");
+  let lose = document.createElement('div')
+  lose.textContent = 'Вы проиграли'
+  let win = document.createElement('div')
+  win.textContent = 'Вы выиграли'
+  lose.classList.add('text')
+  win.classList.add('text')
 
   let activeCardNumber = 0;
   let session = [];
   let id = 1;
   let activeCards = [];
-  let = mass = [...massive, ...massive]
+  let mass = [...massive, ...massive];
   let cards = createCards(mass);
   for (const item of cards) {
     let card = item.card;
@@ -79,12 +121,13 @@ function createApp(massive, title) {
     });
     id++;
 
-    card.addEventListener("click", function action() {
+    let act = () => {
       // * Активируем карту
       for (const index of session) {
         if (item.id === index.id) {
           index.verificationCheck = true;
           item.numberArea.textContent = item.number;
+          console.log(item.number);
         }
       }
 
@@ -100,8 +143,8 @@ function createApp(massive, title) {
               } else {
                 activeCardNumber += 2;
                 console.log(activeCardNumber);
-                activeCards[0].card.removeEventListener("click", action);
-                activeCards[1].card.removeEventListener("click", action);
+                activeCards[0].card.removeEventListener("click", act);
+                activeCards[1].card.removeEventListener("click", act);
                 activeCards[0].card.classList.remove("active");
                 activeCards[1].card.classList.remove("active");
                 activeCards[0].card.classList.add("true");
@@ -124,51 +167,45 @@ function createApp(massive, title) {
             }
             if (session.length === activeCardNumber) {
               activeCardNumber = 0
+              timer.remove()
+              container.append(win)
               container.append(createWinButton());
             }
           }
         }
       }
-    });
+    };
+
+    card.addEventListener("click", act);
+
+    let t = 59;
+    let tim = setInterval(function () {
+      if (t <= 0) {
+        card.removeEventListener("click", act);
+        clearInterval(tim);
+      }
+      --t;
+    }, 1000);
     app.append(card);
   }
-
   container.append(app);
-  document.body.append(container);
-}
 
-function createForm() {
-  let container = document.querySelector("#app");
-  let title = createTitle()
-  let form = document.createElement("form");
-  form.classList.add("form");
-  let input = document.createElement("input");
-  input.placeholder = "Символы в карточках";
-  input.value = "1 2 3 4 5 6 7 8";
-  input.classList.add("input");
-  input.type = "text";
-  input.id = "input";
-  let button = document.createElement("button");
-  button.textContent = "Начать игру";
-  button.type = "submit";
-  button.classList.add("btn", "form-btn");
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    if (!form.input.value) {
-      return;
+  let ti = 59;
+  let time = setInterval(function () {
+    if (ti <= 0) {
+      activeCardNumber = 0
+      timer.remove()
+      container.append(lose)
+      container.append(createWinButton());
+      clearInterval(time);
+    } else {
+      timer.textContent = ti;
     }
+    --ti;
+  }, 1000);
+  container.append(timer);
 
-    numbers = input.value.split(' ')
-    console.log(numbers)
-    let app = document.querySelector("#app");
-    app.replaceChildren();
-    createApp(numbers)
-  })
-  form.append(input);
-  form.append(button);
-  container.append(title)
-  container.append(form);
+  document.body.append(container);
 }
 
 document.addEventListener("DOMContentLoaded", () => {

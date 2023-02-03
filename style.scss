@@ -1,0 +1,75 @@
+@import "https://fonts.fontstorage.com/import/montserrat.css";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+$background: #101519;
+$purple: #684a83;
+$text: #a279aa;
+$red: #6b0b3d;
+$green: #214823;
+
+body {
+  font-family: "Montserrat";
+  background-color: $text;
+  color: $background;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+}
+
+.card {
+  width: 250px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $green;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  background-color: $text;
+  color: $background;
+  margin-bottom: 30px;
+}
+
+.card:last-child {
+  margin-bottom: 30px;
+}
+
+.card:hover {
+  color: $text;
+  background-color: $background;
+  border: 2px solid $background;
+}
+
+.card:active {
+  color: $text;
+  background-color: $red;
+  border: 2px solid $red;
+}
+
+.card__logo {
+  margin-right: 10px;
+}
+
+.card__name {
+  font-family: "Montserrat";
+  font-size: 25px;
+}

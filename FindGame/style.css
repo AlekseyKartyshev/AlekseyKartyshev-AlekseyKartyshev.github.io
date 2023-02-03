@@ -143,6 +143,18 @@ body {
   height: 36px;
 }
 
+.timer{
+  margin-top: 20px;
+  font-size: 35px;
+}
+
+.text{
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 35px;
+}
+
 @media screen and (min-width:1200px) {
   .card:hover{
     color: #D4DBE2;

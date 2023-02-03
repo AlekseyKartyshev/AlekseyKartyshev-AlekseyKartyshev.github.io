@@ -5,142 +5,40 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <meta name="name" content="ITifico"> -->
-  <meta name="description" content=" Задачи для начинающих и продвинутых программистов, а также
-  интересные статьи.">
-  <meta name="keywords" content="alekseykartyshev.github.io">
-  <meta name="robots" content="all">
-  <link rel="icon" href="img/Icon.svg" type="image/svg" />
-  <link rel="stylesheet" href="CSS/style.css" />
-  <link rel="stylesheet" href="CSS/header.css" />
-  <link rel="stylesheet" href="CSS/article-card.css" />
-  <link rel="stylesheet" href="CSS/footer.css" />
-  <link rel="stylesheet" href="CSS/training-card.css" />
-  <title>ITifico</title>
+  <link rel="stylesheet" href="style.css" />
+  <title>Aleksey Kartyshev</title>
 </head>
 
 <body>
   <header>
-    <div class="container header-container">
-      <nav class="header-container__nav">
-        <a href="index.html" class="header-container__main-link">
-          <img src="img/logo.svg" class="header-container__logo" alt="ITifico" />
-        </a>
-        <a href="blog.html" class="header-container__link">Блог</a>
-        <a href="courses.html" class="header-container__link">Практикум</a>
-      </nav>
+    <div class="container">
+      <h1 class="title">Aleksey Kartyshev</h1>
     </div>
   </header>
   <main>
-    <section>
-      <div class="container about-site">
-        <ul class="about-site__list">
-          <li class="about-site__item">
-            <h1 class="about-site__description">
-              <span class="about-site__description_color_red">ITifico</span> —
-              платформа для изучения кода
-            </h1>
-            <p class="about-site__text">
-              Задачи для начинающих и продвинутых программистов, а также
-              интересные статьи.<span class="about-site__text_display_hidden">
-                Присоединяйтесь и разрешите нам поддержать вас в вашей
-                карьере.</span>
-            </p>
-          </li>
-          <li class="about-site__item">
-            <img src="img/img.svg" alt="Программист" class="about-site__programmer" />
-          </li>
-        </ul>
-      </div>
+    <section class="container">
+      <div class="card-wrapper">
+        <article>
+          <a href="ITifico/index.html" class="card">
+            <img src="ITifico/img/Icon.svg" alt="" class="card__logo">
+            <div class="card__name">ITifico</div>
+          </a>
+        </article>
+        <article>
+          <a href="TodoApp/index.html" class="card">
+            <img src="" alt="" class="card__logo">
+            <div class="card__name">ToDo</div>
+          </a>
+        </article>
+        <article>
+          <a href="FindGame/index.html" class="card">
+            <img src="" alt="" class="card__logo">
+            <div class="card__name">Memory</div>
+          </a>
+        </article>
     </section>
-    <section>
-      <div class="container blog">
-        <div class="blog__header">
-          <h2 class="blog__description">Блог</h2>
-          <button class="desktop-btn" onclick="document.location='blog.html'">
-            Больше статей
-          </button>
-          <button class="phone-btn" onclick="document.location='blog.html'">
-            Ещё
-          </button>
-        </div>
-        <div class="blog__articles-list">
-          <article class="blog__article article-card">
-            <div class="article-card__description">
-              <h5 class="article-card__name">
-                <a href="articles/article-1.html" class="article-card__link">
-                  Решение квадратных уравнений при помощи Excel</a>
-              </h5>
-              <p class="article-card__text">
-                Теория уравнений интересовала и интересует математиков всех
-                времён и народов. Необходимость решать уравнения не только
-                первой, но и вто­рой степени еще в древности была вызвана
-                потребностью решать задачи, связанные с нахождением площадей
-                земельных участков и с земляными работами военного характера,
-                а также с развитием астрономии и самой математики.
-              </p>
-            </div>
-            <hr class="article-card__line" />
-            <div class="article-card__date">
-              <img src="img/calendar 1.svg" alt="" class="article-card__calendar" />11.11.2022
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="container training">
-        <div class="training__header">
-          <h2 class="training__description">Практикум</h2>
-          <button class="desktop-btn" onclick="document.location='courses.html'">
-            Больше задач
-          </button>
-          <button class="phone-btn" onclick="document.location='courses.html'">
-            Ещё
-          </button>
-        </div>
-        <div class="training__list">
-          <article class="training__card training-card HTML">
-            <a href="HTML.html">
-              <img src="img/icons8-html-5.svg" alt="" class="training-card__logo" />
-              <h3 class="training-card__header">HTML: задачи для практики</h3>
-              <p class="training-card__description">
-                Практикуйтесь, решайте задачи и становитесь мастером
-                программирования
-              </p>
-            </a>
-          </article>
-          <article class="training__card training-card CSS">
-            <a href="CSS.html">
-              <img src="img/icons8-css3.svg" alt="" class="training-card__logo" />
-              <h3 class="training-card__header">CSS: задачи для практики</h3>
-              <p class="training-card__description">
-                Практикуйтесь, решайте задачи и становитесь мастером
-                программирования
-              </p>
-            </a>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div class="footer-container">
-      <div class="container">
-        <ul class="footer-container__list">
-          <li class="footer-container__item">
-            <a href="" class="footer-container__link">LINKEDIN</a>
-          </li>
-          <li class="footer-container__item">
-            <a href="" class="footer-container__link">TELEGRAM</a>
-          </li>
-          <li class="footer-container__item">
-            <a href="" class="footer-container__link">GMAIL</a>
-          </li>
-        </ul>
-      </div>
     </div>
-  </footer>
+  </main>
 </body>
 
 </html>

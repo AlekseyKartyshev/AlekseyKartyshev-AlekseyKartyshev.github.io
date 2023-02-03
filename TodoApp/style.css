@@ -58,7 +58,7 @@ ul {
 }
 
 .input {
-  max-width: 290px;
+  width: calc(100% - 26px);
   color: #212529;
   font-size: 15px;
   line-height: 15px;

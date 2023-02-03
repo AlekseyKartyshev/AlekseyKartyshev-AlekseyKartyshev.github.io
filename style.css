@@ -1,0 +1,68 @@
+@import "https://fonts.fontstorage.com/import/montserrat.css";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat";
+  background-color: #a279aa;
+  color: #101519;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+}
+
+.card {
+  width: 250px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #214823;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  background-color: #a279aa;
+  color: #101519;
+  margin-bottom: 30px;
+}
+
+.card:last-child {
+  margin-bottom: 30px;
+}
+
+.card:hover {
+  color: #a279aa;
+  background-color: #101519;
+  border: 2px solid #101519;
+}
+
+.card:active {
+  color: #a279aa;
+  background-color: #6b0b3d;
+  border: 2px solid #6b0b3d;
+}
+
+.card__logo {
+  margin-right: 10px;
+}
+
+.card__name {
+  font-family: "Montserrat";
+  font-size: 25px;
+}/*# sourceMappingURL=style.css.map */
