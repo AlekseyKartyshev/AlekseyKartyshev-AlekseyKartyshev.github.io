@@ -1,8 +1,9 @@
+"use strict";
 let numbers = [];
 
 function shuffle(arr) {
-  var j, temp;
-  for (var i = arr.length - 1; i > 0; i--) {
+  let j, temp;
+  for (let i = arr.length - 1; i > 0; i--) {
     j = Math.floor(Math.random() * (i + 1));
     temp = arr[j];
     arr[j] = arr[i];
@@ -17,7 +18,6 @@ function createTitle(title = "Найди пару") {
   createTitle.textContent = title;
   return createTitle;
 }
-
 function createCards(array) {
   let arrayWithCards = [];
   let shuffleMassive = shuffle(array);
@@ -26,6 +26,7 @@ function createCards(array) {
     let cardMassive = {};
     let card = document.createElement("div");
     card.classList.add("card");
+    card.dataset.id = cardId;
     let number = document.createElement("h5");
     number.classList.add("card-title");
     // number.textContent = i;
@@ -33,32 +34,32 @@ function createCards(array) {
     cardMassive.card = card;
     cardMassive.numberArea = number;
     cardMassive.number = i;
-    cardMassive.id = cardId;
     cardId++;
     arrayWithCards.push(cardMassive);
   }
   // console.log(arrayWithCards);
   return arrayWithCards;
 }
-function deleteCard(massive) {
-  massive[0].numberArea.textContent = null;
-  massive[1].numberArea.textContent = null;
+
+function deleteCardnumberInMassive(massive) {
+  massive.forEach((el) => {
+    el.numberArea.textContent = null;
+  });
 }
 
-function createWinButton() {
+function createGameOverButton(container) {
   let button = document.createElement("button");
   button.classList.add("win-btn", "btn");
   button.textContent = "Сыграть еще раз";
   button.addEventListener("click", () => {
     let app = document.querySelector("#app");
     app.replaceChildren();
-    createApp(numbers);
+    createApp(container, numbers);
   });
   return button;
 }
 
-function createForm() {
-  let container = document.querySelector("#app");
+function createForm(container) {
   let title = createTitle();
   let form = document.createElement("form");
   form.classList.add("form");
@@ -79,11 +80,11 @@ function createForm() {
       return;
     }
 
-    numbers = input.value.split(" ");
-    console.log(numbers);
+    numbers = input.value.trim().split(" ");
+    // console.log(numbers);
     let app = document.querySelector("#app");
     app.replaceChildren();
-    createApp(numbers);
+    createApp(container, numbers);
   });
   form.append(input);
   form.append(button);
@@ -91,123 +92,113 @@ function createForm() {
   container.append(form);
 }
 
-function createApp(massive, title) {
-  let container = document.querySelector("#app");
+function createApp(container, massive, title) {
   let app = document.createElement("div");
   app.classList.add("app");
   let appTitle = createTitle(title);
   container.append(appTitle);
+
   let timer = document.createElement("div");
   timer.classList.add("timer");
-  let lose = document.createElement('div')
-  lose.textContent = 'Вы проиграли'
-  let win = document.createElement('div')
-  win.textContent = 'Вы выиграли'
-  lose.classList.add('text')
-  win.classList.add('text')
+  timer.textContent = 60;
+  let t = 59;
+  let timerFunc = setInterval(function () {
+    if (t <= 0) {
+      t = 59;
+      clearInterval(timerFunc);
+      container.append(lose);
+      container.append(createGameOverButton(container));
+      timer.remove();
+    } else {
+      timer.textContent = t;
+    }
+    --t;
+  }, 1000);
 
-  let activeCardNumber = 0;
-  let session = [];
-  let id = 1;
-  let activeCards = [];
-  let mass = [...massive, ...massive];
-  let cards = createCards(mass);
-  for (const item of cards) {
-    let card = item.card;
-    session.push({
-      number: item.number,
-      verificationCheck: false,
-      id: id,
-    });
-    id++;
+  let lose = document.createElement("div");
+  lose.classList.add("text");
+  lose.textContent = "Вы проиграли";
+  let win = document.createElement("div");
+  win.classList.add("text");
+  win.textContent = "Вы выиграли";
 
-    let act = () => {
-      // * Активируем карту
-      for (const index of session) {
-        if (item.id === index.id) {
-          index.verificationCheck = true;
-          item.numberArea.textContent = item.number;
-          console.log(item.number);
-        }
-      }
-
-      // * Проверяем активированность карты
-      for (const ind of session) {
-        if (ind.verificationCheck) {
-          activeCards.push(item);
-          item.card.classList.add('active')
-          if (activeCards.length == 2) {
-            if (activeCards[0].number === activeCards[1].number) {
-              if (activeCards[0].id === activeCards[1].id) {
-                activeCards.pop();
-              } else {
-                activeCardNumber += 2;
-                console.log(activeCardNumber);
-                activeCards[0].card.removeEventListener("click", act);
-                activeCards[1].card.removeEventListener("click", act);
-                activeCards[0].card.classList.remove("active");
-                activeCards[1].card.classList.remove("active");
-                activeCards[0].card.classList.add("true");
-                activeCards[1].card.classList.add("true");
-                activeCards.pop();
-                activeCards.pop();
-              }
-            } else {
-              setTimeout(function () {
-                activeCards[0].card.classList.remove("active");
-                activeCards[1].card.classList.remove("active");
-                activeCards[0].numberArea.textContent = null;
-                activeCards[1].numberArea.textContent = null;
-                activeCards.pop();
-                activeCards.pop();
-              }, 300);
-            }
-            for (const index of session) {
-              index.verificationCheck = false;
-            }
-            if (session.length === activeCardNumber) {
-              activeCardNumber = 0
-              timer.remove()
-              container.append(win)
-              container.append(createWinButton());
-            }
-          }
-        }
-      }
-    };
-
-    card.addEventListener("click", act);
-
-    let t = 59;
-    let tim = setInterval(function () {
+  let massiveWithActiveCards = [];
+  let numberOfActiveCards = 0;
+  let cardMassive = createCards(massive.concat(massive));
+  // console.log(cardMassive);
+  cardMassive.forEach((el) => {
+    let t = 60;
+    let cardTimer = setInterval(function () {
       if (t <= 0) {
-        card.removeEventListener("click", act);
-        clearInterval(tim);
+        // numberOfActiveCards = 0;
+        t = 60;
+        el.card.removeEventListener("click", click);
+        clearInterval(cardTimer);
       }
       --t;
     }, 1000);
-    app.append(card);
-  }
-  container.append(app);
 
-  let ti = 59;
-  let time = setInterval(function () {
-    if (ti <= 0) {
-      activeCardNumber = 0
-      timer.remove()
-      container.append(lose)
-      container.append(createWinButton());
-      clearInterval(time);
-    } else {
-      timer.textContent = ti;
+    function click() {
+      this.classList.add("active");
+      el.numberArea.textContent = el.number;
+      massiveWithActiveCards.push(el);
+      if (massiveWithActiveCards.length === 2) {
+        if (
+          massiveWithActiveCards[0].card.dataset.id ===
+          massiveWithActiveCards[1].card.dataset.id
+        ) {
+          // console.log("Ты еблан и нажал два раза на одну карточку");
+          massiveWithActiveCards.pop();
+        } else {
+          if (
+            massiveWithActiveCards[0].numberArea.textContent ===
+            massiveWithActiveCards[1].numberArea.textContent
+          ) {
+            massiveWithActiveCards[0].card.classList.remove("active");
+            massiveWithActiveCards[1].card.classList.remove("active");
+            massiveWithActiveCards[0].card.classList.add("true");
+            massiveWithActiveCards[1].card.classList.add("true");
+            massiveWithActiveCards[0].card.removeEventListener("click", click);
+            massiveWithActiveCards[1].card.removeEventListener("click", click);
+            massiveWithActiveCards.pop();
+            massiveWithActiveCards.pop();
+            numberOfActiveCards += 2;
+          } else {
+            setTimeout(() => {
+              massiveWithActiveCards[0].card.classList.remove("active");
+              massiveWithActiveCards[1].card.classList.remove("active");
+              massiveWithActiveCards[0].numberArea.textContent = null;
+              massiveWithActiveCards[1].numberArea.textContent = null;
+              massiveWithActiveCards.pop();
+              massiveWithActiveCards.pop();
+            }, 300);
+          }
+        }
+      }
+      if (cardMassive.length === numberOfActiveCards) {
+        numberOfActiveCards = 0;
+        // container.removeChild(timer)
+
+        clearInterval(timerFunc);
+        clearInterval(cardTimer);
+        timer.remove();
+        container.append(win);
+        container.append(createGameOverButton(container));
+      }
+
+      // console.log(massiveWithActiveCards);
     }
-    --ti;
-  }, 1000);
+    el.card.addEventListener("click", click);
+    app.append(el.card);
+  });
+  container.append(app);
   container.append(timer);
-
   document.body.append(container);
 }
 
+// console.log(createCards([1, 2, 3, 4, 5, 6, 7, 8]));
+
 document.addEventListener("DOMContentLoaded", () => {
-  createForm();
+  let container = document.querySelector("#app");
+  createForm(container);
 });
