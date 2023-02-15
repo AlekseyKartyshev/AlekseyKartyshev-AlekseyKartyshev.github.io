@@ -1,0 +1,180 @@
+@import "https://fonts.fontstorage.com/import/engine.css";
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Engine';
+  background-color: #DCCAE9;
+  color: #0B0205;
+}
+
+.container {
+  color: #0B0205;
+  max-width: 290px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.app {
+  width: 290px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.title {
+  margin-top: 15px;
+  margin-bottom: 35px;
+  font-size: 35px;
+}
+
+.card {
+  color: #0B0205;
+  width: 50px;
+  height: 50px;
+  background-color: #724C9D;
+  border: 1px solid #724C9D;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:active{
+  color: #D4DBE2;
+  background-color: #2C1B47;
+  border: 1px solid #2C1B47;
+}
+
+.active{
+  color: #D4DBE2;
+  background-color: #2C1B47;
+  border: 1px solid #2C1B47;
+}
+
+.true {
+  color: #D4DBE2;
+  background-color: #9356A0;
+  border: 1px solid #9356A0;
+}
+
+.card:not(:nth-child(4n)) {
+  margin-right: 30px;
+}
+
+.card:not(:nth-last-child(-n+4)) {
+  margin-bottom: 30px;
+}
+
+.card:last-child {
+  margin-right: 0px;
+}
+
+
+.card-title {
+  font-size: 25px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Engine';
+  background-color: #724C9D;
+  border: 1px solid #724C9D;
+  border-radius: 5px;
+  color: #D4DBE2;
+}
+
+.btn:active{
+  background-color: #0B0205;
+  border: 1px solid #0B0205;
+}
+
+.win-btn {
+  font-size: 25px;
+  margin-top: 30px;
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  margin-top: 15px;
+  border: 1px solid #7B7C81;
+  border-radius: 5px;
+  color: #0B0205;
+}
+
+.input {
+  padding: 0px 5px;
+  font-size: 20px;
+  width: 190px;
+  font-family: 'Engine';
+  color: #0B0205;
+  background-color: transparent;
+  border: none;
+  height: 36px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: #0B0205;
+}
+
+.form-btn {
+  font-size: 20px;
+  border-radius: 0px 5px 5px 0px;
+  width: 100px;
+  height: 36px;
+}
+
+.timer{
+  margin-top: 20px;
+  font-size: 35px;
+}
+
+.text{
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 35px;
+}
+
+@media screen and (min-width:1200px) {
+  .card:hover{
+    color: #D4DBE2;
+    background-color: #2C1B47;
+    border: 1px solid #2C1B47;
+  }
+
+  .card:active{
+    color: #D4DBE2;
+    background-color: #2C1B47;
+    border: 1px solid #2C1B47;
+  }
+
+  .btn:hover{
+    background-color: #2C1B47;
+    border: 1px solid #2C1B47;
+  }
+
+  .btn:active{
+    background-color: #0B0205;
+    border: 1px solid #0B0205;
+  }
+}
