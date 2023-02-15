@@ -164,14 +164,14 @@ function createApp(container, massive, title) {
             massiveWithActiveCards.pop();
             numberOfActiveCards += 2;
           } else {
-            massiveWithActiveCards.pop();
-            massiveWithActiveCards.pop();
             setTimeout(() => {
               massiveWithActiveCards[0].card.classList.remove("active");
               massiveWithActiveCards[1].card.classList.remove("active");
               massiveWithActiveCards[0].numberArea.textContent = null;
               massiveWithActiveCards[1].numberArea.textContent = null;
-            }, 300);
+              massiveWithActiveCards.pop();
+              massiveWithActiveCards.pop();
+            }, 200);
           }
         }
       }
