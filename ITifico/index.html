@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- <meta name="name" content="ITifico"> -->
   <meta name="description" content=" Задачи для начинающих и продвинутых программистов, а также
-  интересные статьи.">
-  <meta name="keywords" content="alekseykartyshev.github.io">
-  <meta name="robots" content="all">
+  интересные статьи." />
+  <meta name="keywords" content="alekseykartyshev.github.io" />
+  <meta name="robots" content="all" />
   <link rel="icon" href="img/Icon.svg" type="image/svg" />
   <link rel="stylesheet" href="CSS/style.css" />
   <link rel="stylesheet" href="CSS/header.css" />
@@ -17,17 +17,26 @@
   <link rel="stylesheet" href="CSS/footer.css" />
   <link rel="stylesheet" href="CSS/training-card.css" />
   <title>ITifico</title>
+  <script src="JS/burger.js" defer></script>
 </head>
 
 <body>
   <header>
     <div class="container header-container">
       <nav class="header-container__nav">
-        <a href="index.html" class="header-container__main-link">
-          <img src="img/logo.svg" class="header-container__logo" alt="ITifico" />
-        </a>
-        <a href="blog.html" class="header-container__link">Блог</a>
-        <a href="courses.html" class="header-container__link">Практикум</a>
+        <div class="header-container___first-menu">
+          <a href="index.html" class="header-container__main-link">
+            <img src="img/logo.svg" class="header-container__logo" alt="ITifico" />
+          </a>
+          <button class="header-container__burger">
+            <img src="img/burger.svg" alt="" class="header-container__burger-img"/>
+          </button>
+        </div>
+        <div class="header-container__dropdown-menu">
+          <hr class="header-container__dropdown-line">
+          <a href="blog.html" class="header-container__link">Блог</a>
+          <a href="courses.html" class="header-container__link">Практикум</a>
+        </div>
       </nav>
     </div>
   </header>

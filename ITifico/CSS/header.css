@@ -63,12 +63,20 @@
     margin-right: auto;
   }
 
+  .header-container__burger {
+    display: none;
+  }
+
   .header-container__nav {
     margin-top: 20px;
     margin-bottom: 40px;
     font-weight: 600;
     display: flex;
     align-items: center;
+  }
+
+  .header-container__dropdown-line {
+    display: none;
   }
 
   .header-container__main-link {
@@ -101,11 +109,30 @@
   }
 
   .header-container__nav {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    padding-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .header-container___first-menu {
+    /* vertical-align: top; */
     font-weight: 600;
     display: flex;
     align-items: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: sticky;
+    z-index: 2;
+    background-color: var(--white);
+  }
+
+  .header-container__burger {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    width: 34px;
+    height: 34px;
+    background-color: var(--red-1);
+    text-align: center;
   }
 
   .header-container__logo {
@@ -114,22 +141,73 @@
 
   .header-container__main-link {
     margin-right: auto;
+    height: 40px;
+  }
+
+  .header-container__dropdown-line {
+    border: 1px solid var(--border);
+    margin-bottom: 15px;
+  }
+
+  .header-container__dropdown-menu {
+    transform: translateY(-165px);
+    z-index: 1;
+    display: block;
+    position: fixed;
+    width: calc(100% - 30px);
+    background-color: var(--white);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+
+  @keyframes open {
+    0% {
+      transform: translateY(-165px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes close {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-165px);
+    }
+  }
+
+  .close {
+    animation: close 500ms linear 0ms 1 alternate forwards;
+  }
+
+  .open {
+    animation: open 500ms linear 0ms 1 alternate forwards;
   }
 
   .header-container__link {
+    display: flex;
+    align-items: center;
+    width: 100%;
     color: var(--black);
     font-family: "Ubuntu";
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
+    height: 40px;
+    padding-left: 15px;
   }
 
   .header-container__link:hover {
-    color: var(--red-1);
+    color: var(--white);
+    background-color: var(--red-1);
   }
 
-  .header-container__link:not(:last-child) {
-    margin-right: 25px;
+  .header-container__link:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 }
