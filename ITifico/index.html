@@ -21,18 +21,25 @@
 </head>
 
 <body>
-  <header>
-    <div class="container header-container">
-      <nav class="header-container__nav">
+  <header class="header-container">
+    <div class="container">
+      <nav class="header-container__nav-desktop">
+        <a href="index.html" class="header-container__main-link">
+          <img src="img/logo.svg" class="header-container__logo" alt="ITifico" />
+        </a>
+        <a href="blog.html" class="header-container__link">Блог</a>
+        <a href="courses.html" class="header-container__link">Практикум</a>
+      </nav>
+      <nav class="header-container__nav-mobile">
         <div class="header-container___first-menu">
           <a href="index.html" class="header-container__main-link">
             <img src="img/logo.svg" class="header-container__logo" alt="ITifico" />
           </a>
           <button class="header-container__burger">
-            <img src="img/burger.svg" alt="" class="header-container__burger-img"/>
+            <img src="img/burger.svg" alt="" class="header-container__burger-img" />
           </button>
         </div>
-        <div class="header-container__dropdown-menu">
+        <div class="header-container__dropdown-menu" dataset-open="false">
           <hr class="header-container__dropdown-line">
           <a href="blog.html" class="header-container__link">Блог</a>
           <a href="courses.html" class="header-container__link">Практикум</a>
