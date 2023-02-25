@@ -158,7 +158,7 @@
   }
 
   .article-card__description {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   /* .tag-line { */
@@ -189,7 +189,7 @@
 
   .article-card__name {
     color: var(--black);
-    margin: 0px 0px 15px 0px;
+    margin: 0px 0px 10px 0px;
     font-family: "Ubuntu";
     font-style: normal;
     font-weight: 700;

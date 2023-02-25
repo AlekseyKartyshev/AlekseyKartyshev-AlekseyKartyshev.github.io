@@ -153,8 +153,38 @@ img {
     display: flex;
   }
 
+  .paragraph-container__date {
+    color: var(--gray-1);
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .paragraph-container__calendar {
+    transform: translateY(-1px);
+    margin-right: 5px;
+    z-index: -1;
+  }
+
+  .pragraph-container__author {
+    color:var(--gray-1);
+    margin: 0;
+    margin-bottom: 15px;
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
   .paragraph-container__logo {
     margin-top: 0;
+    margin-bottom: 25px;
     font-family: "Bitter";
     font-style: normal;
     font-weight: 700;
@@ -210,7 +240,6 @@ img {
 
   .paragraph-container__item {
     margin-top: 10px;
-    /* margin-left: 20px; */
   }
 
   .paragraph-container__advertisement {
@@ -285,9 +314,12 @@ img {
     font-family: "Ubuntu";
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
     color: var(--gray-1);
+  }
+  .paragraph-container__paragraph::first-letter{
+    margin-left:  5px;
   }
 
   .paragraph-container__photo {
