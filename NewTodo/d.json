@@ -1,0 +1,72 @@
+[
+  {
+    "id": 772722,
+    "name": "Achintya Tagore",
+    "email": "tagore_achintya@quitzon-aufderhar.info",
+    "gender": "male",
+    "status": "active"
+  },
+  {
+    "id": 772253,
+    "name": "Deevakar Sharma",
+    "email": "deevakar_sharma@schamberger.co",
+    "gender": "female",
+    "status": "active"
+  },
+  {
+    "id": 771764,
+    "name": "Akshainie Pandey",
+    "email": "akshainie_pandey@thiel.io",
+    "gender": "male",
+    "status": "active"
+  },
+  {
+    "id": 771226,
+    "name": "Bhuvaneshwar Menon",
+    "email": "bhuvaneshwar_menon@blanda.io",
+    "gender": "female",
+    "status": "active"
+  },
+  {
+    "id": 769695,
+    "name": "Sushma Khanna",
+    "email": "khanna_sushma@senger.name",
+    "gender": "female",
+    "status": "inactive"
+  },
+  {
+    "id": 769693,
+    "name": "Alok Patil II",
+    "email": "ii_patil_alok@flatley.co",
+    "gender": "male",
+    "status": "active"
+  },
+  {
+    "id": 769692,
+    "name": "Abhisyanta Pandey",
+    "email": "abhisyanta_pandey@padberg.info",
+    "gender": "female",
+    "status": "active"
+  },
+  {
+    "id": 769691,
+    "name": "Pres. Aayushmaan Jain",
+    "email": "aayushmaan_pres_jain@wintheiser.io",
+    "gender": "female",
+    "status": "inactive"
+  },
+  {
+    "id": 769690,
+    "name": "Shankar Dhawan",
+    "email": "shankar_dhawan@miller.io",
+    "gender": "male",
+    "status": "inactive"
+  },
+  {
+    "id": 769689,
+    "name": "Devadatt Ganaka",
+    "email": "ganaka_devadatt@dickens.name",
+    "gender": "male",
+    "status": "active"
+  }
+]

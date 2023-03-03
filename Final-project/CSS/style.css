@@ -1,0 +1,406 @@
+:root {
+  --brown-1: #d5621d;
+  --brown-2: #210e09;
+}
+body {
+  background-color: var(--brown-2);
+  margin: 0;
+}
+
+*:active,
+*:hover,
+*:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 1296px;
+  margin: 0px auto;
+}
+
+.btn {
+  color: #fff;
+  background-color: var(--brown-2);
+  border: 2px solid var(--brown-1);
+  border-radius: 5px;
+  font-family: "Stolzl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Header */
+.header-container {
+  margin-top: 30px;
+  margin-bottom: 53px;
+  display: flex;
+  align-items: center;
+}
+
+.header-container__logo {
+  margin-right: auto;
+}
+
+.header-container__nav {
+  margin-right: 189px;
+}
+
+.header-container__link {
+  color: #fff;
+  font-family: "Stolzl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.header-container__link:not(:last-child) {
+  margin-right: 30px;
+}
+
+.header-container__reservation {
+  padding: 15px 30px;
+  width: 188px;
+  height: 51px;
+}
+
+/* Poster */
+.poster {
+  margin-bottom: 120px;
+  display: flex;
+}
+
+.poster__main {
+  width: 856px;
+  height: 540px;
+  border-radius: 5px;
+  background: url("../img/mainposter.png") no-repeat;
+  margin: 0px 24px 0px 0px;
+}
+
+.poster__since {
+  margin: 0px;
+  width: 154px;
+  height: 44px;
+  color: var(--brown-2);
+  background: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 60px;
+  top: 301px;
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+}
+
+.poster__description {
+  margin: 0px;
+  width: 623px;
+  height: 120px;
+  color: #fff;
+  position: relative;
+  left: 60px;
+  top: 328px;
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.poster__secondary {
+  height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.poster__nav {
+  margin: 0px;
+  width: 416px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.poster__nav-link {
+  width: 208px;
+  height: 40px;
+  color: #fff;
+  background: rgba(213, 98, 29, 0.05);
+  border-radius: 5px 5px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.active {
+  background: rgba(213, 98, 29, 0.1);
+}
+
+.poster__other {
+  padding: 37px 35px;
+  width: 416px;
+  height: 502px;
+  background: rgba(213, 98, 29, 0.1);
+  border-radius: 0px 0px 5px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.poster__other-poster {
+  width: 160px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.poster__other-poster:not(:nth-child(2n)) {
+  margin-right: 26px;
+}
+.poster__other-poster:not(:nth-last-child(-n + 2)) {
+  margin-bottom: 26px;
+}
+
+/* Menu */
+.menu__description {
+  margin: 0px auto 40px;
+  width: 244px;
+  height: 38px;
+  color: var(--brown-2);
+  background: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.menu__header {
+  margin: 0px auto 80px;
+  color: #ffffff;
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.menu__offer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 96px;
+}
+
+.menu__left-arrow {
+  margin-right: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: var(--brown-1);
+  border-radius: 5px;
+}
+
+.left-arrow {
+  width: 14px;
+  height: 14px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-radius: 1px;
+  transform: rotate(-135deg);
+}
+
+.menu__dishes {
+  width: 1076px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.menu__dish:not(:nth-child(2n)) {
+  margin-right: 104px;
+}
+
+.menu__dish:not(:nth-last-child(-n + 2)) {
+  margin-bottom: 56px;
+}
+
+.dish-card {
+  width: 486px;
+  height: 111px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dish-card__photo {
+  width: 110px;
+  height: 110px;
+  margin-right: 25px;
+}
+
+.dish-card__text {
+  display: block;
+}
+
+.dish-card__name {
+  margin: 0px auto 0px 0px;
+  color: #fff;
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.dish-card__header {
+  display: flex;
+  align-items: center;
+}
+
+.dish-card__cost {
+  width: 84px;
+  height: 38px;
+  color: #fff;
+  background: none;
+  border: 2px solid var(--brown-1);
+  border-radius: 5px;
+  position: relative;
+  top: 0px;
+  left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.dish-card__mass {
+  margin: 0px 0px 10px 0px;
+  color: var(--brown-1);
+  font-family: "Stolzl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.dish-card__description {
+  margin: 0px;
+  color: #fff;
+  font-family: "Stolzl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.menu__right-arrow {
+  margin-left: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: var(--brown-1);
+  border-radius: 5px;
+}
+
+.right-arrow {
+  width: 14px;
+  height: 14px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-radius: 1px;
+  transform: rotate(45deg);
+}
+
+.menu__btn {
+  margin: 0px auto;
+  width: 171px;
+  height: 57px;
+  color: #fff;
+  background: var(--brown-1);
+  border: 2px solid var(--brown-1);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
