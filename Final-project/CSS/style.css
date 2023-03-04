@@ -207,9 +207,12 @@ img {
 }
 
 /* Menu */
+.technical-rider__description,
+.footer-container__description,
+.events-tourists__description,
 .menu__description {
   margin: 0px auto 40px;
-  width: 244px;
+  width: 286px;
   height: 38px;
   color: var(--brown-2);
   background: #fff;
@@ -227,7 +230,9 @@ img {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-
+.technical-rider__header,
+.footer-container__header,
+.events-tourists__header,
 .menu__header {
   margin: 0px auto 80px;
   color: #ffffff;
@@ -384,7 +389,7 @@ img {
 }
 
 .menu__btn {
-  margin: 0px auto;
+  margin: 0px auto 150px;
   width: 171px;
   height: 57px;
   color: #fff;
@@ -403,4 +408,263 @@ img {
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+/* Events-tourists */
+.events-tourists {
+  margin-bottom: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.events-tourists__events {
+  margin-right: 44px;
+  width: 416px;
+  height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+
+.events-tourists__img {
+  width: 416px;
+  height: 560px;
+  margin-right: 44px;
+  border: none;
+  border-radius: 5px;
+}
+
+.events-tourists__tourists {
+  width: 416px;
+  height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+
+.events-tourists__text {
+  margin: 0px;
+  color: #ffffff;
+  font-family: "Stolzl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.events-tourists__text:not(:nth-child(3n-1)) {
+  margin-bottom: 20px;
+}
+
+.events-tourists__btn {
+  width: 156px;
+  height: 51px;
+}
+
+/* Technical-riders */
+.technical-rider {
+  margin-bottom: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.technical-rider__main {
+  display: flex;
+  justify-content: center;
+}
+
+.technical-rider__accordions {
+  margin-right: 134px;
+}
+
+.technical-rider__accordion {
+  padding: 20px 40px;
+  width: 526px;
+  height: 67px;
+  color: #ffffff;
+  background: rgba(213, 98, 29, 0.1);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.technical-rider__accordion:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.down-arrow {
+  margin-left: auto;
+  width: 15px;
+  height: 15px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  border-radius: 2px;
+  transform: rotate(-135deg) translateY(3px) translateX(3px);
+}
+
+.technical-rider__header {
+  margin-bottom: 80px;
+}
+
+.technical-rider__sound-engineer-header {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: centera;
+  width: 415px;
+  height: 96px;
+  color: #fff;
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.technical-rider__sounen-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.technikal-rider__sounden {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+.technikal-rider__sounden:first-child {
+  margin-right: 24px;
+}
+
+.technikal-rider__sounden-img {
+  margin-bottom: 30px;
+}
+
+.technikal-rider__sounden-name {
+  margin-bottom: 25px;
+  color: #fff;
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.technical-rider__social-list {
+  display: flex;
+  align-items: center;
+}
+
+.technikal-rider__social {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--brown-1);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.technikal-rider__social:first-child {
+  margin-right: 25px;
+}
+
+/* Footer */
+.footer-container__description {
+  margin: 0px auto 40px;
+}
+
+.footer-container__herder {
+  margin-bottom: 80px;
+}
+
+.footer-container__main {
+  display: flex;
+  align-items: center;
+}
+
+.footer-container__contacts {
+  margin-right: 24px;
+  padding: 50px;
+  height: 656px;
+  width: 416px;
+  background: rgba(213, 98, 29, 0.1);
+  border: 2px solid #d5621d;
+  border-radius: 5px;
+}
+
+.footer-container__contact:not(:last-child) {
+  margin-bottom: 35px;
+}
+
+.footer-container__contact-name {
+  margin-bottom: 20px;
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.footer-container__contact-key {
+  font-family: "Stolzl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #ffffff;
+}
+
+.footer-container__contact-line {
+  margin: 45px 0px;
+  opacity: 0.5;
+  border: 1px solid #ffffff;
+}
+
+.footer-container__map {
+  height: 656px;
+  width: 856px;
+  background: url("../img/map.png");
+  background-position: -2px -2px;
+  border: 2px solid #d5621d;
+  border-radius: 5px;
+}
+
+.footer-container__line {
+  margin: 100px 0px 30px;
+  opacity: 0.5;
+  border: 1px solid #ffffff;
+}
+
+.footer-container__text{
+  margin-bottom: 30px;
+  font-family: 'Stolzl';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+color: #FFFFFF;
+opacity: 0.5;
 }
