@@ -177,7 +177,6 @@ img {
   }
 
   .about-site__description_color_red {
-    /* font-weight: 700; */
     color: var(--red-1);
   }
 
