@@ -1,0 +1,72 @@
+@import "https://fonts.fontstorage.com/import/exotwo.css";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: #d4e9fa;
+}
+
+.header {
+  margin-top: 10px;
+  text-align: center;
+  color: #316887;
+  font-family: "Exo 2";
+}
+
+.result-container {
+  margin: 10px auto 5px;
+  width: 260px;
+  height: 50px;
+  display: grid;
+  align-content: center;
+  justify-content: end;
+}
+
+.result {
+  margin: 10px 10px 5px 0px;
+  color: #316887;
+  font-family: "Exo 2";
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.button-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: repeat(5, 50px);
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.button-container__button {
+  font-family: "Exo 2";
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+}
+
+.button-container__button_red {
+  background-color: #f2676a;
+}
+
+.button-container__button_orange {
+  background-color: #eea536;
+}
+
+.button-container__button_blue {
+  background-color: #48a3f2;
+}
+
+.button-container__button_green {
+  background-color: #27cf55;
+}
