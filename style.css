@@ -1,4 +1,4 @@
-@import "https://fonts.fontstorage.com/import/frenchpress.css";
+@import "https://fonts.fontstorage.com/import/montserrat.css";
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +9,9 @@ a {
 }
 
 body {
-  font-family: "Frenchpress";
-  background-color: #ADA9BA;
-  color: #22222E;
+  font-family: "Montserrat";
+  background-color: #31333b;
+  color: #fff;
 }
 
 .container {
@@ -34,11 +34,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #393A5A;
+  border: 2px solid #f0bf6c;
   border-radius: 5px;
-  font-family: "Frenchpress";
-  background-color: #ADA9BA;
-  color: #22222E;
+  font-family: "Montserrat";
+  background-color: #31333b;
+  color: #fff;
   margin-bottom: 30px;
 }
 
@@ -47,15 +47,9 @@ body {
 }
 
 .card:hover {
-  color: #ADA9BA;
-  background-color: #393A5A;
-  border: 2px solid #393A5A;
-}
-
-.card:active {
-  color: #ADA9BA;
-  background-color: #22222E;
-  border: 2px solid #22222E;
+  color: #31333b;
+  background-color: #f0bf6c;
+  border: 2px solid #f0bf6c;
 }
 
 .card__logo {
@@ -63,6 +57,6 @@ body {
 }
 
 .card__name {
-  font-family: "Frenchpress";
+  font-family: "Montserrat";
   font-size: 25px;
 }/*# sourceMappingURL=style.css.map */

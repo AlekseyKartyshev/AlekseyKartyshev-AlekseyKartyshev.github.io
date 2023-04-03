@@ -1,4 +1,4 @@
-@import "https://fonts.fontstorage.com/import/frenchpress.css";
+@import "https://fonts.fontstorage.com/import/montserrat.css";
 
 * {
   margin: 0;
@@ -9,16 +9,16 @@ a {
   text-decoration: none;
 }
 
-$text: #22222E;
-$purple: #684a83;
-$background: #ADA9BA;
-$dark-blue: #393A5A;
-$green: #214823;
+$font:"Montserrat";
+$text-1: #f0bf6c;
+$text-2: #fff;
+$background: #31333b ;
+
 
 body {
-  font-family: 'Frenchpress';
+  font-family: $font;
   background-color: $background;
-  color: $text;
+  color: $text-2;
 }
 
 .container {
@@ -41,11 +41,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid $dark-blue;
+  border: 2px solid $text-1;
   border-radius: 5px;
-  font-family: "Frenchpress";
+  font-family: $font;
   background-color: $background;
-  color: $text;
+  color: $text-2;
   margin-bottom: 30px;
 }
 
@@ -55,14 +55,14 @@ body {
 
 .card:hover {
   color: $background;
-  background-color: $dark-blue;
-  border: 2px solid $dark-blue;
+  background-color: $text-1;
+  border: 2px solid $text-1;
 }
 
 .card:active {
-  color: $background;
-  background-color: $text;
-  border: 2px solid $text;
+  // color: $background;
+  // background-color: $text;
+  // border: 2px solid $text;
 }
 
 .card__logo {
@@ -70,6 +70,6 @@ body {
 }
 
 .card__name {
-  font-family: "Frenchpress";
+  font-family: $font;
   font-size: 25px;
 }
