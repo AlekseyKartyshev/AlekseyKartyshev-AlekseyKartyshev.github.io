@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8" />
@@ -8,13 +8,14 @@
   <title>Manhattan</title>
   <link rel="stylesheet" href="fonts/stylesheet.css" />
   <link rel="stylesheet" href="CSS/style.css" />
+  <script src="src/main.js"></script>
 </head>
 
 <body>
   <header>
     <div class="container">
       <div class="header-container">
-        <a href="index.html" class="header-container__logo"><img src="img/logo.svg" alt="" /></a>
+        <a href="index.html" class="header-container__logo" id="logo"><img src="img/logo.svg" alt="" /></a>
         <nav class="header-container__nav">
           <a href="" class="header-container__link">Главная</a>
           <a href="" class="header-container__link">Меню</a>
@@ -23,7 +24,7 @@
           <a href="" class="header-container__link">Галерея</a>
           <a href="" class="header-container__link">Новости</a>
         </nav>
-        <button class="header-container__reservation btn">
+        <button class="header-container__reservation btn" id="booking">
           Бронирование
         </button>
       </div>
@@ -69,120 +70,240 @@
             <button class="menu__left-arrow">
               <div class="left-arrow"></div>
             </button>
-            <ul class="menu__dishes">
-              <li class="menu__dish dish-card">
-                <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
-                <div class="dish-card__text">
-                  <div class="dish-card__header">
-                    <h3 class="dish-card__name">Amet donec.</h3>
-                    <button class="dish-card__cost">550&#8381;</button>
-                  </div>
-                  <p class="dish-card__mass">200 гр</p>
-                  <p class="dish-card__description">
-                    Placerat id auctor nunc id vel vel curabitur. Urna fames
-                    maecenas leo elit diam nibh elit.
-                  </p>
-                </div>
-              </li>
-              <li class="menu__dish dish-card">
-                <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
-                <div class="dish-card__text">
-                  <div class="dish-card__header">
-                    <h3 class="dish-card__name">Amet donec.</h3>
-                    <button class="dish-card__cost">550&#8381;</button>
-                  </div>
-                  <p class="dish-card__mass">200 гр</p>
-                  <p class="dish-card__description">
-                    Placerat id auctor nunc id vel vel curabitur. Urna fames
-                    maecenas leo elit diam nibh elit.
-                  </p>
-                </div>
-              </li>
-              <li class="menu__dish dish-card">
-                <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
-                <div class="dish-card__text">
-                  <div class="dish-card__header">
-                    <h3 class="dish-card__name">Amet donec.</h3>
-                    <button class="dish-card__cost">550&#8381;</button>
-                  </div>
-                  <p class="dish-card__mass">200 гр</p>
-                  <p class="dish-card__description">
-                    Placerat id auctor nunc id vel vel curabitur. Urna fames
-                    maecenas leo elit diam nibh elit.
-                  </p>
-                </div>
-              </li>
-              <li class="menu__dish dish-card">
-                <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
-                <div class="dish-card__text">
-                  <div class="dish-card__header">
-                    <h3 class="dish-card__name">Amet donec.</h3>
-                    <button class="dish-card__cost">550&#8381;</button>
-                  </div>
-                  <p class="dish-card__mass">200 гр</p>
-                  <p class="dish-card__description">
-                    Placerat id auctor nunc id vel vel curabitur. Urna fames
-                    maecenas leo elit diam nibh elit.
-                  </p>
-                </div>
-              </li>
-              <li class="menu__dish dish-card">
-                <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
-                <div class="dish-card__text">
-                  <div class="dish-card__header">
-                    <h3 class="dish-card__name">Amet donec.</h3>
-                    <button class="dish-card__cost">550&#8381;</button>
-                  </div>
-                  <p class="dish-card__mass">200 гр</p>
-                  <p class="dish-card__description">
-                    Placerat id auctor nunc id vel vel curabitur. Urna fames
-                    maecenas leo elit diam nibh elit.
-                  </p>
-                </div>
-              </li>
-              <li class="menu__dish dish-card">
-                <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
-                <div class="dish-card__text">
-                  <div class="dish-card__header">
-                    <h3 class="dish-card__name">Amet donec.</h3>
-                    <button class="dish-card__cost">550&#8381;</button>
-                  </div>
-                  <p class="dish-card__mass">200 гр</p>
-                  <p class="dish-card__description">
-                    Placerat id auctor nunc id vel vel curabitur. Urna fames
-                    maecenas leo elit diam nibh elit.
-                  </p>
-                </div>
-              </li>
-              <li class="menu__dish dish-card">
-                <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
-                <div class="dish-card__text">
-                  <div class="dish-card__header">
-                    <h3 class="dish-card__name">Amet donec.</h3>
-                    <button class="dish-card__cost">550&#8381;</button>
-                  </div>
-                  <p class="dish-card__mass">200 гр</p>
-                  <p class="dish-card__description">
-                    Placerat id auctor nunc id vel vel curabitur. Urna fames
-                    maecenas leo elit diam nibh elit.
-                  </p>
-                </div>
-              </li>
-              <li class="menu__dish dish-card">
-                <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
-                <div class="dish-card__text">
-                  <div class="dish-card__header">
-                    <h3 class="dish-card__name">Amet donec.</h3>
-                    <button class="dish-card__cost">550&#8381;</button>
-                  </div>
-                  <p class="dish-card__mass">200 гр</p>
-                  <p class="dish-card__description">
-                    Placerat id auctor nunc id vel vel curabitur. Urna fames
-                    maecenas leo elit diam nibh elit.
-                  </p>
-                </div>
-              </li>
-            </ul>
+            <div class="siema">
+              <div>
+                <ul class="menu__dishes">
+                  <li class="menu__dish dish-card">
+                    <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
+                    <div class="dish-card__text">
+                      <div class="dish-card__header">
+                        <h3 class="dish-card__name">Amet donec.</h3>
+                        <button class="dish-card__cost">550&#8381;</button>
+                      </div>
+                      <p class="dish-card__mass">200 гр</p>
+                      <p class="dish-card__description">
+                        Placerat id auctor nunc id vel vel curabitur. Urna fames
+                        maecenas leo elit diam nibh elit.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="menu__dish dish-card">
+                    <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
+                    <div class="dish-card__text">
+                      <div class="dish-card__header">
+                        <h3 class="dish-card__name">Amet donec.</h3>
+                        <button class="dish-card__cost">550&#8381;</button>
+                      </div>
+                      <p class="dish-card__mass">200 гр</p>
+                      <p class="dish-card__description">
+                        Placerat id auctor nunc id vel vel curabitur. Urna fames
+                        maecenas leo elit diam nibh elit.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="menu__dish dish-card">
+                    <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
+                    <div class="dish-card__text">
+                      <div class="dish-card__header">
+                        <h3 class="dish-card__name">Amet donec.</h3>
+                        <button class="dish-card__cost">550&#8381;</button>
+                      </div>
+                      <p class="dish-card__mass">200 гр</p>
+                      <p class="dish-card__description">
+                        Placerat id auctor nunc id vel vel curabitur. Urna fames
+                        maecenas leo elit diam nibh elit.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="menu__dish dish-card">
+                    <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
+                    <div class="dish-card__text">
+                      <div class="dish-card__header">
+                        <h3 class="dish-card__name">Amet donec.</h3>
+                        <button class="dish-card__cost">550&#8381;</button>
+                      </div>
+                      <p class="dish-card__mass">200 гр</p>
+                      <p class="dish-card__description">
+                        Placerat id auctor nunc id vel vel curabitur. Urna fames
+                        maecenas leo elit diam nibh elit.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="menu__dish dish-card">
+                    <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
+                    <div class="dish-card__text">
+                      <div class="dish-card__header">
+                        <h3 class="dish-card__name">Amet donec.</h3>
+                        <button class="dish-card__cost">550&#8381;</button>
+                      </div>
+                      <p class="dish-card__mass">200 гр</p>
+                      <p class="dish-card__description">
+                        Placerat id auctor nunc id vel vel curabitur. Urna fames
+                        maecenas leo elit diam nibh elit.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="menu__dish dish-card">
+                    <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
+                    <div class="dish-card__text">
+                      <div class="dish-card__header">
+                        <h3 class="dish-card__name">Amet donec.</h3>
+                        <button class="dish-card__cost">550&#8381;</button>
+                      </div>
+                      <p class="dish-card__mass">200 гр</p>
+                      <p class="dish-card__description">
+                        Placerat id auctor nunc id vel vel curabitur. Urna fames
+                        maecenas leo elit diam nibh elit.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="menu__dish dish-card">
+                    <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
+                    <div class="dish-card__text">
+                      <div class="dish-card__header">
+                        <h3 class="dish-card__name">Amet donec.</h3>
+                        <button class="dish-card__cost">550&#8381;</button>
+                      </div>
+                      <p class="dish-card__mass">200 гр</p>
+                      <p class="dish-card__description">
+                        Placerat id auctor nunc id vel vel curabitur. Urna fames
+                        maecenas leo elit diam nibh elit.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="menu__dish dish-card">
+                    <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
+                    <div class="dish-card__text">
+                      <div class="dish-card__header">
+                        <h3 class="dish-card__name">Amet donec.</h3>
+                        <button class="dish-card__cost">550&#8381;</button>
+                      </div>
+                      <p class="dish-card__mass">200 гр</p>
+                      <p class="dish-card__description">
+                        Placerat id auctor nunc id vel vel curabitur. Urna fames
+                        maecenas leo elit diam nibh elit.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul class="menu__dishes">
+                  <li class="menu__dish dish-card">
+                    <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
+                    <div class="dish-card__text">
+                      <div class="dish-card__header">
+                        <h3 class="dish-card__name">Amet donec.</h3>
+                        <button class="dish-card__cost">550&#8381;</button>
+                      </div>
+                      <p class="dish-card__mass">200 гр</p>
+                      <p class="dish-card__description">
+                        Placerat id auctor nunc id vel vel curabitur. Urna fames
+                        maecenas leo elit diam nibh elit.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="menu__dish dish-card">
+                    <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
+                    <div class="dish-card__text">
+                      <div class="dish-card__header">
+                        <h3 class="dish-card__name">Amet donec.</h3>
+                        <button class="dish-card__cost">550&#8381;</button>
+                      </div>
+                      <p class="dish-card__mass">200 гр</p>
+                      <p class="dish-card__description">
+                        Placerat id auctor nunc id vel vel curabitur. Urna fames
+                        maecenas leo elit diam nibh elit.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="menu__dish dish-card">
+                    <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
+                    <div class="dish-card__text">
+                      <div class="dish-card__header">
+                        <h3 class="dish-card__name">Amet donec.</h3>
+                        <button class="dish-card__cost">550&#8381;</button>
+                      </div>
+                      <p class="dish-card__mass">200 гр</p>
+                      <p class="dish-card__description">
+                        Placerat id auctor nunc id vel vel curabitur. Urna fames
+                        maecenas leo elit diam nibh elit.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="menu__dish dish-card">
+                    <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
+                    <div class="dish-card__text">
+                      <div class="dish-card__header">
+                        <h3 class="dish-card__name">Amet donec.</h3>
+                        <button class="dish-card__cost">550&#8381;</button>
+                      </div>
+                      <p class="dish-card__mass">200 гр</p>
+                      <p class="dish-card__description">
+                        Placerat id auctor nunc id vel vel curabitur. Urna fames
+                        maecenas leo elit diam nibh elit.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="menu__dish dish-card">
+                    <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
+                    <div class="dish-card__text">
+                      <div class="dish-card__header">
+                        <h3 class="dish-card__name">Amet donec.</h3>
+                        <button class="dish-card__cost">550&#8381;</button>
+                      </div>
+                      <p class="dish-card__mass">200 гр</p>
+                      <p class="dish-card__description">
+                        Placerat id auctor nunc id vel vel curabitur. Urna fames
+                        maecenas leo elit diam nibh elit.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="menu__dish dish-card">
+                    <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
+                    <div class="dish-card__text">
+                      <div class="dish-card__header">
+                        <h3 class="dish-card__name">Amet donec.</h3>
+                        <button class="dish-card__cost">550&#8381;</button>
+                      </div>
+                      <p class="dish-card__mass">200 гр</p>
+                      <p class="dish-card__description">
+                        Placerat id auctor nunc id vel vel curabitur. Urna fames
+                        maecenas leo elit diam nibh elit.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="menu__dish dish-card">
+                    <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
+                    <div class="dish-card__text">
+                      <div class="dish-card__header">
+                        <h3 class="dish-card__name">Amet donec.</h3>
+                        <button class="dish-card__cost">550&#8381;</button>
+                      </div>
+                      <p class="dish-card__mass">200 гр</p>
+                      <p class="dish-card__description">
+                        Placerat id auctor nunc id vel vel curabitur. Urna fames
+                        maecenas leo elit diam nibh elit.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="menu__dish dish-card">
+                    <img src="img/Rectangle 36.png" class="dish-card__photo" alt="" />
+                    <div class="dish-card__text">
+                      <div class="dish-card__header">
+                        <h3 class="dish-card__name">Amet donec.</h3>
+                        <button class="dish-card__cost">550&#8381;</button>
+                      </div>
+                      <p class="dish-card__mass">200 гр</p>
+                      <p class="dish-card__description">
+                        Placerat id auctor nunc id vel vel curabitur. Urna fames
+                        maecenas leo elit diam nibh elit.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
             <button class="menu__right-arrow">
               <div class="right-arrow"></div>
             </button>
@@ -269,7 +390,7 @@
                       <img src="img/entypo-social_vk.svg" alt="">
                     </li>
                     <li class="technikal-rider__social">
-                     <img src="img/bxl_telegram.svg" alt="">
+                      <img src="img/bxl_telegram.svg" alt="">
                     </li>
                   </ul>
                 </li>
@@ -301,7 +422,8 @@
           <div class="footer-container__contacts">
             <div class="footer-container__contact">
               <div class="footer-container__contact-name">Адрес</div>
-              <address class="footer-container__contact-key">Набережная реки Фонтанки, 90 (вход в арке с белыми колоннами)</address>
+              <address class="footer-container__contact-key">Набережная реки Фонтанки, 90 (вход в арке с белыми
+                колоннами)</address>
             </div>
             <div class="footer-container__contact">
               <div class="footer-container__contact-name">Телефон</div>
@@ -314,11 +436,13 @@
             <hr class="footer-container__contact-line">
             <div class="footer-container__contact">
               <div class="footer-container__contact-name">Директор</div>
-              <div class="footer-container__contact-key">Лидия Эмильевна, <a href="tel:89219635550" class="footer-container__contact-key">+7(921) 963-55-50</a></div>
+              <div class="footer-container__contact-key">Лидия Эмильевна, <a href="tel:89219635550"
+                  class="footer-container__contact-key">+7(921) 963-55-50</a></div>
             </div>
             <div class="footer-container__contact">
               <div class="footer-container__contact-name">Арт-директор</div>
-              <div class="footer-container__contact-key">Илиния Ионашко, <a href="tel:89819894330" class="footer-container__contact-key">+7(981) 989-43-30</a></div>
+              <div class="footer-container__contact-key">Илиния Ионашко, <a href="tel:89819894330"
+                  class="footer-container__contact-key">+7(981) 989-43-30</a></div>
             </div>
           </div>
           <div class="footer-container__map"></div>
@@ -328,6 +452,12 @@
       </div>
     </div>
   </footer>
+  <script src="src/siema.min.js"></script>
+  <script>
+    const mySiema = new Siema();
+    document.querySelector('.menu__left-arrow').addEventListener('click', () => {mySiema.prev()})
+    document.querySelector('.menu__right-arrow').addEventListener('click', () => {mySiema.next()})
+  </script>
 </body>
 
 </html>

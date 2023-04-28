@@ -89,6 +89,12 @@ img {
   height: 51px;
 }
 
+.header-container__reservation:hover{
+  background-color: var(--brown-1);
+  border: 2px solid var(--brown-1);
+  color:var(--brown-2);
+}
+
 /* Poster */
 .poster {
   margin-bottom: 120px;
@@ -254,6 +260,7 @@ img {
 }
 
 .menu__left-arrow {
+  border: none;
   margin-right: 60px;
   display: flex;
   align-items: center;
@@ -274,6 +281,7 @@ img {
 }
 
 .menu__dishes {
+  margin-right: 40px;
   width: 1076px;
   display: flex;
   align-items: center;
@@ -369,6 +377,7 @@ img {
 }
 
 .menu__right-arrow {
+  border: none;
   margin-left: 60px;
   display: flex;
   align-items: center;
@@ -658,13 +667,137 @@ img {
   border: 1px solid #ffffff;
 }
 
-.footer-container__text{
+.footer-container__text {
   margin-bottom: 30px;
-  font-family: 'Stolzl';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 150%;
-color: #FFFFFF;
-opacity: 0.5;
+  font-family: "Stolzl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.modal {
+  position: fixed;
+  top: calc((100% / 2) - 100px);
+  left: calc((100% / 2) - 350px);
+  padding: 30px 50px 20px 40px;
+  height: 200px;
+  width: 700px;
+  background: #34170b;
+  border: 2px solid #d5621d;
+  border-radius: 5px;
+  font-family: "Stolzl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #ffffff;
+}
+
+.modal-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 100px;
+  height: 50px;
+  color: #fff;
+  background: var(--brown-1);
+  border: 2px solid var(--brown-1);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+fieldset{
+  background: #34170b;
+  border: 2px solid #d5621d;
+  border-radius: 5px;
+  font-family: "Stolzl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #ffffff;
+}
+
+.modal-form{
+  position: fixed;
+  top: calc((100% / 2) - 250px);
+  left: calc((100% / 2) - 250px);
+  padding: 20px;
+  height: 435px;
+  width: 500px;
+  background: #34170b;
+  border: 2px solid #d5621d;
+  border-radius: 5px;
+  font-family: "Stolzl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #ffffff;
+}
+
+input{
+  background: #34170b;
+  border: none;
+  border-radius: 5px;
+  font-family: "Stolzl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #ffffff;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+ 
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+.form-btn{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 150px;
+  height: 50px;
+  color: #fff;
+  background: var(--brown-1);
+  border: 2px solid var(--brown-1);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.white {
+  background-color: #fff;
 }
