@@ -62,7 +62,6 @@ function booking(container) {
   bookingForm.appendChild(fieldset("number", "Количество гостей*"));
   bookingForm.appendChild(fieldset("number", "Ваш номер телефона*"));
   bookingForm.appendChild(fieldset("date", "Дата мероприятия*"));
-  bookingForm.appendChild(fieldset("text", "Примечания"));
 
   bookingForm.appendChild(okButton);
   modalForm.appendChild(bookingForm);

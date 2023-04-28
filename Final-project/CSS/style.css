@@ -734,10 +734,10 @@ fieldset{
 
 .modal-form{
   position: fixed;
-  top: calc((100% / 2) - 250px);
+  top: calc((100% / 2) - 180px);
   left: calc((100% / 2) - 250px);
   padding: 20px;
-  height: 435px;
+  height: 360px;
   width: 500px;
   background: #34170b;
   border: 2px solid #d5621d;
@@ -776,8 +776,8 @@ input[type=number] {
 
 .form-btn{
   position: absolute;
-  right: 20px;
-  bottom: 20px;
+  right: 22px;
+  bottom: 22px;
   width: 150px;
   height: 50px;
   color: #fff;
