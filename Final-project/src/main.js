@@ -36,6 +36,7 @@ function fieldset(type, text) {
 function booking(container) {
   const modalForm = document.createElement("div");
   const okButton = document.createElement("input");
+  const cancelButton = document.createElement("button");
   const bookingForm = document.createElement("form");
 
   modalForm.classList.add("modal-form");
@@ -44,6 +45,13 @@ function booking(container) {
   okButton.type = "submit";
   okButton.value = "Далее";
 
+  cancelButton.textContent = "Отмена";
+  cancelButton.classList.add("cancel-btn");
+
+  cancelButton.addEventListener('click', () => {
+    container.removeChild(modalForm);
+  })
+  
   bookingForm.addEventListener("submit", (e) => {
     e.preventDefault();
     console.log(bookingForm.children[0].lastChild.value);
@@ -53,7 +61,7 @@ function booking(container) {
       bookingForm.children[2].lastChild.value
     ) {
       container.removeChild(modalForm);
-      modalWindow(container, "Спасибо, что выбрали нас");
+      modalWindow(container, "Спасибо, что выбрали нас. Мы скоро свяжемся с вами чтобы уточнить детали");
     } else {
       alert("Заполните поля со звездочкой");
     }
@@ -64,6 +72,7 @@ function booking(container) {
   bookingForm.appendChild(fieldset("date", "Дата мероприятия*"));
 
   bookingForm.appendChild(okButton);
+  bookingForm.appendChild(cancelButton);
   modalForm.appendChild(bookingForm);
   container.appendChild(modalForm);
 }
