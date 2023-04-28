@@ -42,7 +42,7 @@ function booking(container) {
 
   okButton.classList.add("form-btn");
   okButton.type = "submit";
-  okButton.value = "Принять";
+  okButton.value = "Далее";
 
   bookingForm.addEventListener("submit", (e) => {
     e.preventDefault();
