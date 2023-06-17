@@ -1,7 +1,9 @@
 :root {
-  --font: 'Manrope'
+  --font: 'Manrope';
+  --text-color: #000;
+  --color1: #F46387;
+  --color2: #80233A;
 }
-
 *:active,
 *:hover,
 *:focus {
@@ -191,6 +193,7 @@ img {
   text-transform: uppercase;
   color: #FFFFFF;
   text-shadow: 0px 4px 50px rgba(0, 0, 0, 0.5);
+  margin-bottom: 45px;
 }
 
 .slider__btn {
