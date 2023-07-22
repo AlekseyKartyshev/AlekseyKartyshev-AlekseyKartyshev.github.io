@@ -165,7 +165,7 @@ function getRandomInt(max) {
 }
 
 async function startGame() {
-  let words = await getWords("https://github.com/AlekseyKartyshev/Words-for-gallows/blob/main/summary.json");
+  let words = await getWords("https://alekseykartyshev.github.io/Gallows/src/summary.json");
   gallows(words[getRandomInt(words.length)].word);
 }
 
