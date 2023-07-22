@@ -1,0 +1,132 @@
+@import "https://fonts.fontstorage.com/import/zhizn.css";
+
+*:active,
+*:hover,
+*:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Zhizn';
+  background-color: #ccc;
+  margin: 0;
+}
+
+a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.header {
+  font-size: 60px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.letter {
+  border: 3px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  font-weight: 600;
+  font-size: 40px;
+  border-radius: 7px;
+}
+
+.gallows {
+  width: 400px;
+  height: 400px;
+  border: 3px solid black;
+  border-radius: 7px;
+  margin-bottom: 40px;
+}
+
+.keyboard {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.line>.letter:hover {
+  background-color: #7f7f7f;
+}
+
+.line {
+  display: flex;
+  gap: 10px;
+}
+
+.word {
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.used {
+  background-color: #999;
+}
+
+.end-game-header {
+  margin: 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.end-game-button {
+  padding: 10px 20px;
+  background: none;
+  border-radius: 7px;
+  border: 3px solid black;
+  font-family: 'Zhizn';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.lose, .win {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+
+.none {
+  display: none;
+}
